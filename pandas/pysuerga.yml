@@ -1,3 +1,8 @@
+pysuerga:
+  templates_path: _templates
+  ignore:
+  - _templates/layout.html
+  - pysuerga.yml
 static:
   logo: /static/img/pandas_dark.svg
   css:

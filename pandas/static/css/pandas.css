@@ -30,3 +30,6 @@ div.card {
 .carousel-indicators li.active {
     background-color: black;
 }
+.juniper-output pre {
+    color: #eee !important;
+}

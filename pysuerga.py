@@ -103,17 +103,14 @@ def get_source_files(source_path: str) -> typing.Generator[str, None, None]:
             yield os.path.join(root, fname)
 
 
-def main(config_fname: str,
-         source_path: str,
-         theme_path: str,
+def main(source_path: str,
          target_path: str,
          base_url: str) -> int:
+    config_fname = os.path.join(source_path, 'pysuerga.yml')
+
     shutil.rmtree(target_path, ignore_errors=True)
     os.makedirs(target_path, exist_ok=True)
-    shutil.copytree(os.path.join(theme_path, 'static/'),
-                    os.path.join(target_path, 'static'))
 
-    jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(theme_path))
     sys.stderr.write('Generating context...\n')
     context = get_context(config_fname,
                           preprocessors=[Preprocessors.navbar_add_info,
@@ -123,7 +120,15 @@ def main(config_fname: str,
                           base_url=base_url)
     sys.stderr.write('Context generated\n')
 
+    templates_path = os.path.join(source_path,
+                                  context['pysuerga']['templates_path'])
+    jinja_env = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(templates_path))
+
     for fname in get_source_files(source_path):
+        if fname in context['pysuerga']['ignore']:
+            continue
+
         sys.stderr.write(f'Processing {fname}\n')
         dirname = os.path.dirname(fname)
         os.makedirs(os.path.join(target_path, dirname), exist_ok=True)
@@ -152,19 +157,14 @@ def main(config_fname: str,
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Documentation builder.')
-    parser.add_argument('config_fname',
-                        help='path to the yaml config file')
-    parser.add_argument('--sources-path', default='source',
-                        help='path to the directory with the markdown pages')
-    parser.add_argument('--theme-path', default='theme',
-                        help='path to the directory with the static files')
+    parser.add_argument('source_path',
+                        help='path to the source directory '
+                             '(must contain pysuerga.yml)')
     parser.add_argument('--target-path', default='build',
                         help='directory where to write the output')
     parser.add_argument('--base-url', default='',
                         help='base url where the website is served from')
     args = parser.parse_args()
-    sys.exit(main(args.config_fname,
-                  args.sources_path,
-                  args.theme_path,
+    sys.exit(main(args.source_path,
                   args.target_path,
                   args.base_url))
