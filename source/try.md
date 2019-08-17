@@ -1,4 +1,17 @@
 # Try pandas online
 
-Add here a web-based Python terminal like the one in <https://spacy.io/>,
-and links to some example notebooks in mybinder.
+<pre data-executable>
+    import pandas
+    fibonacci = pandas.Series([1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
+    fibonacci.sum()
+</pre>
+<script src="juniper.min.js"></script>
+<script>new Juniper({ repo: 'datapythonista/pandas-web' })</script>
+
+You can also try _pandas_ on [Binder](https://mybinder.org/) for one of the next topics:
+
+_(links will be added soon)_
+
+- Exploratory analisys of US presidents
+- Preprocessing the Titanic dataset to train a machine learning model
+- Forecasting the stock market
