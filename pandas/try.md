@@ -14,8 +14,8 @@ fibonacci.sum()
 
 You can also try _pandas_ on [Binder](https://mybinder.org/) for one of the next topics:
 
-_(links will be added soon)_
-
 - Exploratory analisys of US presidents
 - Preprocessing the Titanic dataset to train a machine learning model
 - Forecasting the stock market
+
+_(links will be added soon)_
