@@ -75,6 +75,8 @@
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
                                     
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
                                         <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
@@ -103,8 +105,8 @@
         </header>
         <main role="main">
             <div class="container">
-                <h1>Contributing to pandas</h1>
-<h2>Where to start?</h2>
+                <h1 id="contributing-to-pandas">Contributing to pandas</h1>
+<h2 id="where-to-start">Where to start?</h2>
 <p>All contributions, bug reports, bug fixes, documentation improvements,
 enhancements, and ideas are welcome.</p>
 <p>If you are brand new to pandas or open-source development, we recommend
@@ -116,7 +118,7 @@ where you could start out. Once you\'ve found an interesting issue, you
 can return here to get your development environment setup.</p>
 <p>Feel free to ask questions on the <a href="https://groups.google.com/forum/?fromgroups#!forum/pydata">mailing list</a> or on
 <a href="https://gitter.im/pydata/pandas">Gitter</a>.</p>
-<h2>Bug reports and enhancement requests</h2>
+<h2 id="bug-reports-and-enhancement-requests">Bug reports and enhancement requests</h2>
 <p>Bug reports are an important part of making <em>pandas</em> more stable. Having
 a complete bug report will allow others to reproduce the bug and provide
 insight into fixing. See <a href="https://stackoverflow.com/help/mcve">this stackoverflow
@@ -152,11 +154,11 @@ already been reported and/or fixed.</p>
 </ol>
 <p>The issue will then show up to the <em>pandas</em> community and be open to
 comments/ideas from others.</p>
-<h2>Working with the code</h2>
+<h2 id="working-with-the-code">Working with the code</h2>
 <p>Now that you have an issue you want to fix, enhancement to add, or
 documentation to improve, you need to learn how to work with GitHub and
 the <em>pandas</em> code base.</p>
-<h3>Version control, Git, and GitHub</h3>
+<h3 id="version-control-git-and-github">Version control, Git, and GitHub</h3>
 <p>To the new user, working with Git is one of the more daunting aspects of
 contributing to <em>pandas</em>. It can very quickly become overwhelming, but
 sticking to the guidelines below will help keep the process
@@ -173,12 +175,12 @@ work together on the project.</p>
 <li>the <a href="http://docs.scipy.org/doc/numpy/dev/index.html">NumPy documentation</a>.</li>
 <li>Matthew Brett's <a href="http://matthew-brett.github.com/pydagogue/">Pydagogue</a>.</li>
 </ul>
-<h3>Getting started with Git</h3>
+<h3 id="getting-started-with-git">Getting started with Git</h3>
 <p><a href="http://help.github.com/set-up-git-redirect">GitHub has instructions</a>
 for installing git, setting up your SSH key, and configuring git. All
 these steps need to be completed before you can work seamlessly between
 your local repository and GitHub.</p>
-<h3>Forking</h3>
+<h3 id="forking">Forking</h3>
 <p>You will need your own fork to work on the code. Go to the <a href="https://github.com/pandas-dev/pandas">pandas
 project page</a> and hit the
 <code>Fork</code> button. You will want to clone your fork to your machine:</p>
@@ -188,13 +190,13 @@ git remote add upstream https://github.com/pandas-dev/pandas.git
 </code></pre>
 <p>This creates the directory <code>pandas-yourname</code> and connects
 your repository to the upstream (main project) <em>pandas</em> repository.</p>
-<h3>Creating a development environment</h3>
+<h3 id="creating-a-development-environment">Creating a development environment</h3>
 <p>To test out code changes, you'll need to build pandas from source,
 which requires a C compiler and Python environment. If you're making
 documentation changes, you can skip to contributing documentation
 but you won't be able to build the documentation locally before pushing your
 changes.</p>
-<h4>Installing a C compiler</h4>
+<h4 id="installing-a-c-compiler">Installing a C compiler</h4>
 <p>Pandas uses C extensions (mostly written using Cython) to speed up
 certain operations. To install pandas from source, you need to compile
 these C extensions, which means you need a C compiler. This process
@@ -206,7 +208,7 @@ depends on which platform you're using.</p>
 </ul>
 <p>Let us know if you have any difficulties by opening an issue or reaching
 out on <a href="https://gitter.im/pydata/pandas">Gitter</a>.</p>
-<h4>Creating a Python environment</h4>
+<h4 id="creating-a-python-environment">Creating a Python environment</h4>
 <p>Now that you have a C compiler, create an isolated pandas development
 environment:</p>
 <ul>
@@ -221,12 +223,12 @@ environment:</p>
 <li>Build and install pandas</li>
 <li>
 <p>Install the optional dependencies</p>
-<h1>Create and activate the build environment</h1>
+<h1 id="create-and-activate-the-build-environment">Create and activate the build environment</h1>
 <p>conda env create -f environment.yml
 conda activate pandas-dev</p>
-<h1>or with older versions of Anaconda:</h1>
+<h1 id="or-with-older-versions-of-anaconda">or with older versions of Anaconda:</h1>
 <p>source activate pandas-dev</p>
-<h1>Build and install pandas</h1>
+<h1 id="build-and-install-pandas">Build and install pandas</h1>
 <p>python setup.py build_ext --inplace -j 4
 python -m pip install -e .</p>
 </li>
@@ -247,7 +249,7 @@ environments, nor any existing Python installation.</p>
 <pre><code>conda deactivate
 </code></pre>
 <p>See the full conda docs <a href="http://conda.pydata.org/docs">here</a>.</p>
-<h4>Creating a Python environment (pip)</h4>
+<h4 id="creating-a-python-environment-pip">Creating a Python environment (pip)</h4>
 <p>If you aren't using conda for your development environment, follow
 these instructions. You'll need to have at least python3.5 installed on
 your system.</p>
@@ -265,7 +267,7 @@ python -m pip install -r requirements-dev.txt
 python setup.py build_ext --inplace -j 4
 python -m pip install -e .
 </code></pre>
-<h3>Creating a branch</h3>
+<h3 id="creating-a-branch">Creating a branch</h3>
 <p>You want your master branch to reflect only production-ready code, so
 create a feature branch for making your changes. For example:</p>
 <pre><code>git branch shiny-new-feature
@@ -288,7 +290,7 @@ git pull upstream master --ff-only
 <p>When you want to update the feature branch with changes in master after
 you created the branch, check the section on
 updating a PR.</p>
-<h2>Contributing to the documentation</h2>
+<h2 id="contributing-to-the-documentation">Contributing to the documentation</h2>
 <p>Contributing to the documentation benefits everyone who uses <em>pandas</em>.
 We encourage you to help us improve the documentation, and you don\'t
 have to be an expert on <em>pandas</em> to do so! In fact, there are sections
@@ -296,7 +298,7 @@ of the docs that are worse off after being written by experts. If
 something in the docs doesn\'t make sense to you, updating the relevant
 section after you figure it out is a great way to ensure it will help
 the next person.</p>
-<h3>About the <em>pandas</em> documentation</h3>
+<h3 id="about-the-pandas-documentation">About the <em>pandas</em> documentation</h3>
 <p>The documentation is written in <strong>reStructuredText</strong>, which is almost
 like writing in plain English, and built using
 <a href="http://sphinx.pocoo.org/">Sphinx</a>. The Sphinx Documentation has an
@@ -376,7 +378,7 @@ is used to generate the <a href="http://pandas.pydata.org/pandas-docs/stable/api
 and the actual public methods. This will identify methods documented in
 <code>doc/source/api.rst</code> that are not actually class methods, and existing
 methods that are not documented in <code>doc/source/api.rst</code>.</p>
-<h3>Updating a <em>pandas</em> docstring</h3>
+<h3 id="updating-a-pandas-docstring">Updating a <em>pandas</em> docstring</h3>
 <p>When improving a single function or method\'s docstring, it is not
 necessarily needed to build the full documentation (see next section).
 However, there is a script that checks a docstring (for example for the
@@ -396,11 +398,11 @@ the docstring guide for some tips and tricks to get the doctests
 passing.</p>
 <p>When doing a PR with a docstring update, it is good to post the output
 of the validation script in a comment on github.</p>
-<h3>How to build the <em>pandas</em> documentation</h3>
-<h4>Requirements</h4>
+<h3 id="how-to-build-the-pandas-documentation">How to build the <em>pandas</em> documentation</h3>
+<h4 id="requirements">Requirements</h4>
 <p>First, you need to have a development environment to be able to build
 pandas (see the docs on creating a development environment above).</p>
-<h4>Building the documentation</h4>
+<h4 id="building-the-documentation">Building the documentation</h4>
 <p>So how do you build the docs? Navigate to your local <code>doc/</code> directory in
 the console and run:</p>
 <pre><code>python make.py html
@@ -442,13 +444,13 @@ you just built:</p>
 </code></pre>
 <p>And you'll have the satisfaction of seeing your new and improved
 documentation!</p>
-<h4>Building master branch documentation</h4>
+<h4 id="building-master-branch-documentation">Building master branch documentation</h4>
 <p>When pull requests are merged into the <em>pandas</em> <code>master</code> branch, the
 main parts of the documentation are also built by Travis-CI. These docs
 are then hosted <a href="https://dev.pandas.io">here</a>, see
 also the Continuous Integration section.</p>
-<h2>Contributing to the code base</h2>
-<h3>Code standards</h3>
+<h2 id="contributing-to-the-code-base">Contributing to the code base</h2>
+<h3 id="code-standards">Code standards</h3>
 <p>Writing good code is not just about what you write. It is also about
 <em>how</em> you write it. During Continuous Integration 
 testing, several tools will be run to check your code for stylistic
@@ -469,7 +471,7 @@ that we do not make sudden changes to the code that could have the
 potential to break a lot of user code as a result, that is, we need it
 to be as <em>backwards compatible</em> as possible to avoid mass breakages.</p>
 <p>Additional standards are outlined on the <a href="https://github.com/pandas-dev/pandas/wiki/Code-Style-and-Conventions">code style wiki page</a>.</p>
-<h3>Optional dependencies</h3>
+<h3 id="optional-dependencies">Optional dependencies</h3>
 <p>Optional dependencies (e.g. matplotlib) should be imported with the
 private helper <code>pandas.compat._optional.import_optional_dependency</code>.
 This ensures a consistent error message when the dependency is not met.</p>
@@ -479,7 +481,7 @@ found. This test should be skipped if the library is present.</p>
 <p>All optional dependencies should be documented and the
 minimum required version should be set in the
 <code>pandas.compat._optional.VERSIONS</code> dict.</p>
-<h4>C (cpplint)</h4>
+<h4 id="c-cpplint">C (cpplint)</h4>
 <p><em>pandas</em> uses the
 <a href="https://google.github.io/styleguide/cppguide.html">Google</a> standard.
 Google provides an open source style checker called <code>cpplint</code>, but we
@@ -523,7 +525,7 @@ clang-format -i modified-c-directory/*.c modified-c-directory/*.h
 correct as many errors as possible, but it may not correct <em>all</em> of
 them. Thus, it is recommended that you run <code>cpplint</code> to double check and
 make any other style fixes manually.</p>
-<h4>Python (PEP8 / black)</h4>
+<h4 id="python-pep8-black">Python (PEP8 / black)</h4>
 <p><em>pandas</em> follows the <a href="http://www.python.org/dev/peps/pep-0008/">PEP8</a>
 standard and uses <a href="https://black.readthedocs.io/en/stable/">Black</a> and
 <a href="http://flake8.pycqa.org/en/latest/">Flake8</a> to ensure a consistent code
@@ -568,7 +570,7 @@ imitate the behaviour as follows:</p>
 </code></pre>
 <p>This will get all the files being changed by the PR (and ending with
 <code>.py</code>), and run <code>flake8</code> on them, one after the other.</p>
-<h4>Import formatting</h4>
+<h4 id="import-formatting">Import formatting</h4>
 <p><em>pandas</em> uses <a href="https://pypi.org/project/isort/">isort</a> to standardise
 import formatting across the codebase.</p>
 <p>A guide to import layout as per pep8 can be found
@@ -606,7 +608,7 @@ copy of the files.</p>
 <p>The <code>--recursive</code> flag can be passed to sort all files in a
 directory.</p>
 <p>You can then verify the changes look ok, then git commit and push.</p>
-<h4>Backwards compatibility</h4>
+<h4 id="backwards-compatibility">Backwards compatibility</h4>
 <p>Please try to maintain backward compatibility. <em>pandas</em> has lots of
 users with lots of existing code, so don\'t break it if at all possible.
 If you think breakage is required, clearly state why as part of the pull
@@ -644,7 +646,7 @@ def new_func():
 <li>Update all of pandas existing tests and code to use the new argument</li>
 </ol>
 <p>See contributing warnings for more.</p>
-<h3>Testing with continuous integration</h3>
+<h3 id="testing-with-continuous-integration">Testing with continuous integration</h3>
 <p>The <em>pandas</em> test suite will run automatically on
 <a href="https://travis-ci.org/">Travis-CI</a> and <a href="https://azure.microsoft.com/en-us/services/devops/pipelines/">Azure
 Pipelines</a>
@@ -664,7 +666,7 @@ This is an example of a green build.</p>
 triggered on the CI. You can enable the auto-cancel feature, which
 removes any non-currently-running tests for that same pull-request, for
 <a href="https://docs.travis-ci.com/user/customizing-the-build/#Building-only-the-latest-commit">Travis-CI here</a>.</p>
-<h3>Test-driven development/code writing</h3>
+<h3 id="test-driven-developmentcode-writing">Test-driven development/code writing</h3>
 <p><em>pandas</em> is serious about testing and strongly encourages contributors
 to embrace <a href="https://en.wikipedia.org/wiki/Test-driven_development">test-driven development (TDD)</a>. This
 development process "relies on the repetition of a very short
@@ -680,7 +682,7 @@ ahead of time so this is never an issue.</p>
 <p>Like many packages, <em>pandas</em> uses <a href="http://docs.pytest.org/en/latest/">pytest</a>
 and the convenient extensions in <a href="http://docs.scipy.org/doc/numpy/reference/routines.testing.html">numpy.testing</a>.</p>
 <p>The earliest supported pytest version is 4.0.2.</p>
-<h4>Writing tests</h4>
+<h4 id="writing-tests">Writing tests</h4>
 <p>All tests should go into the <code>tests</code> subdirectory of the specific
 package. This folder contains many current examples of tests, and we
 suggest looking to these for inspiration. If your test requires working
@@ -709,7 +711,7 @@ the actual result to the expected correct result:</p>
 
     assert_frame_equal(pivoted, expected)
 </code></pre>
-<h4>Transitioning to <code>pytest</code></h4>
+<h4 id="transitioning-to-pytest">Transitioning to <code>pytest</code></h4>
 <p><em>pandas</em> existing test structure is <em>mostly</em> classed based, meaning that
 you will typically find tests wrapped in a class.</p>
 <pre><code class="python">class TestReallyCoolFeature:
@@ -725,7 +727,7 @@ this:</p>
     pass
 </code></pre>
 
-<h4>Using <code>pytest</code></h4>
+<h4 id="using-pytest">Using <code>pytest</code></h4>
 <p>Here is an example of a self-contained set of tests that illustrate
 multiple features that we like to use.</p>
 <ul>
@@ -807,7 +809,7 @@ test_cool_feature.py::test_dtypes[int8] PASSED
 test_cool_feature.py::test_series[int8] PASSED
 </code></pre>
 
-<h4>Using <code>hypothesis</code></h4>
+<h4 id="using-hypothesis">Using <code>hypothesis</code></h4>
 <p>Hypothesis is a library for property-based testing. Instead of
 explicitly parametrizing a test, you can describe <em>all</em> valid inputs and
 let Hypothesis try to find a failing input. Even better, no matter how
@@ -842,7 +844,7 @@ preferred if the inputs or logic are simple, with Hypothesis tests
 reserved for cases with complex logic or where there are too many
 combinations of options or subtle interactions to test (or think of!)
 all of them.</p>
-<h4>Testing warnings</h4>
+<h4 id="testing-warnings">Testing warnings</h4>
 <p>By default, one of pandas CI workers will fail if any unhandled warnings
 are emitted.</p>
 <p>If your change involves checking that a warning is actually emitted, use
@@ -882,7 +884,7 @@ single test.</p>
 </code></pre>
 
 <p>Alternatively, consider breaking up the unit test.</p>
-<h3>Running the test suite</h3>
+<h3 id="running-the-test-suite">Running the test suite</h3>
 <p>The tests can then be run directly inside your Git clone (without having
 to install <em>pandas</em>) by typing:</p>
 <pre><code>pytest pandas
@@ -920,7 +922,7 @@ documentation.</p>
 </code></pre>
 
 <p>with an imported pandas to run tests similarly.</p>
-<h3>Running the performance test suite</h3>
+<h3 id="running-the-performance-test-suite">Running the performance test suite</h3>
 <p>Performance matters and it is worth considering whether your code has
 introduced performance regressions. <em>pandas</em> is in the process of
 migrating to <a href="https://github.com/spacetelescope/asv">asv benchmarks</a> to
@@ -975,7 +977,7 @@ using an existing Python environment by:</p>
 <code>python</code> that comes from your <code>$PATH</code>.</p>
 <p>Information on how to write a benchmark and how to use asv can be found
 in the <a href="https://asv.readthedocs.io/en/latest/writing_benchmarks.html">asv documentation</a>.</p>
-<h3>Documenting your code</h3>
+<h3 id="documenting-your-code">Documenting your code</h3>
 <p>Changes should be reflected in the release notes located in
 <code>doc/source/whatsnew/vx.y.z.rst</code>. This file contains an ongoing change
 log for each release. Add an entry to this file to document your fix,
@@ -994,8 +996,8 @@ new function or method
 (<a href="https://github.com/pandas-dev/pandas/blob/v0.20.2/pandas/core/frame.py#L1495">example</a>)
 or a new keyword argument
 (<a href="https://github.com/pandas-dev/pandas/blob/v0.20.2/pandas/core/generic.py#L568">example</a>).</p>
-<h2>Contributing your changes to <em>pandas</em></h2>
-<h3>Committing your code</h3>
+<h2 id="contributing-your-changes-to-pandas">Contributing your changes to <em>pandas</em></h2>
+<h3 id="committing-your-code">Committing your code</h3>
 <p>Keep style fixes to a separate commit to make your pull request more
 readable.</p>
 <p>Once you've made changes, you can see them by typing:</p>
@@ -1035,7 +1037,7 @@ or #1234. Either style is fine, but the former is generally preferred:</p>
 <p>Now you can commit your changes in your local repository:</p>
 <pre><code>git commit -m
 </code></pre>
-<h3>Pushing your changes</h3>
+<h3 id="pushing-your-changes">Pushing your changes</h3>
 <p>When you want your changes to appear publicly on your GitHub page, push
 your forked feature branch\'s commits:</p>
 <pre><code>git push origin shiny-new-feature
@@ -1054,7 +1056,7 @@ upstream        git://github.com/pandas-dev/pandas.git (push)
 <p>Now your code is on GitHub, but it is not yet a part of the <em>pandas</em>
 project. For that to happen, a pull request needs to be submitted on
 GitHub.</p>
-<h3>Review your code</h3>
+<h3 id="review-your-code">Review your code</h3>
 <p>When you\'re ready to ask for a code review, file a pull request. Before
 you do, once again make sure that you have followed all the guidelines
 outlined in this document regarding code style, tests, performance
@@ -1067,7 +1069,7 @@ changes against the branch it was based on:</p>
 <li>Select the <code>base</code> and <code>compare</code> branches, if necessary. This will be
     <code>master</code> and <code>shiny-new-feature</code>, respectively.</li>
 </ol>
-<h3>Finally, make the pull request</h3>
+<h3 id="finally-make-the-pull-request">Finally, make the pull request</h3>
 <p>If everything looks good, you are ready to make a pull request. A pull
 request is how code from a local repository becomes available to the
 GitHub community and can be looked at and eventually merged into the
@@ -1084,7 +1086,7 @@ release. To submit a pull request:</p>
 </ol>
 <p>This request then goes to the repository maintainers, and they will
 review the code.</p>
-<h3>Updating your pull request</h3>
+<h3 id="updating-your-pull-request">Updating your pull request</h3>
 <p>Based on the review you get on your pull request, you will probably need
 to make some changes to the code. In that case, you can make them in
 your branch, add a new commit to that branch, push it to GitHub, and the
@@ -1120,7 +1122,7 @@ updating.</p>
 your pull request by pushing to the branch on GitHub:</p>
 <pre><code>git push origin shiny-new-feature
 </code></pre>
-<h3>Delete your merged branch (optional)</h3>
+<h3 id="delete-your-merged-branch-optional">Delete your merged branch (optional)</h3>
 <p>Once your feature branch is accepted into upstream, you\'ll probably
 want to get rid of the branch. First, merge upstream master into your
 branch so git knows it is safe to delete your branch:</p>

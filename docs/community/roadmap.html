@@ -75,6 +75,8 @@
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
                                     
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
                                         <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
@@ -103,7 +105,7 @@
         </header>
         <main role="main">
             <div class="container">
-                <h1>Roadmap</h1>
+                <h1 id="roadmap">Roadmap</h1>
 <p>This page provides an overview of the major themes in pandas'
 development. Each of these items requires a relatively large amount of
 effort to implement. These may be achieved more quickly with dedicated
@@ -115,11 +117,10 @@ may discover issues preventing the adoption of the feature.</p>
 from inclusion in pandas. The roadmap is intended for larger,
 fundamental changes to the project that are likely to take months or
 years of developer time. Smaller-scoped items will continue to be
-tracked on our <a href="https://github.com/pandas-dev/pandas/issues">issue
-tracker</a>.</p>
-<p>See <code>roadmap.evolution</code> for proposing
+tracked on our <a href="https://github.com/pandas-dev/pandas/issues">issue tracker</a>.</p>
+<p>See <a href="#roadmap-evolution">Roadmap evolution</a> for proposing
 changes to this document.</p>
-<h1>Extensibility</h1>
+<h2 id="extensibility">Extensibility</h2>
 <p>Pandas <code>extending.extension-types</code> allow
 for extending NumPy types with custom data types and array storage.
 Pandas uses extension types internally, and provides an interface for
@@ -130,7 +131,7 @@ array. These problems are especially pronounced for nested data.</p>
 library, making their behavior more consistent with the handling of
 NumPy arrays. We'll do this by cleaning up pandas' internals and
 adding new methods to the extension array interface.</p>
-<h1>String data type</h1>
+<h2 id="string-data-type">String data type</h2>
 <p>Currently, pandas stores text data in an <code>object</code> -dtype NumPy array.
 The current implementation has two primary drawbacks: First, <code>object</code>
 -dtype is not specific to strings: any Python object can be stored in an
@@ -147,7 +148,7 @@ in-memory array libraries (for example, Apache Arrow). As part of the
 work, we may need to implement certain operations expected by pandas
 users (for example the algorithm used in, <code>Series.str.upper</code>). That work
 may be done outside of pandas.</p>
-<h1>Apache Arrow interoperability</h1>
+<h2 id="apache-arrow-interoperability">Apache Arrow interoperability</h2>
 <p><a href="https://arrow.apache.org">Apache Arrow</a> is a cross-language development
 platform for in-memory data. The Arrow logical types are closely aligned
 with typical pandas use cases.</p>
@@ -155,7 +156,7 @@ with typical pandas use cases.</p>
 data types within pandas. This will let us take advantage of its I/O
 capabilities and provide for better interoperability with other
 languages and libraries using Arrow.</p>
-<h1>Block manager rewrite</h1>
+<h2 id="block-manager-rewrite">Block manager rewrite</h2>
 <p>We'd like to replace pandas current internal data structures (a
 collection of 1 or 2-D arrays) with a simpler collection of 1-D arrays.</p>
 <p>Pandas internal data model is quite complex. A DataFrame is made up of
@@ -177,7 +178,7 @@ burden of pandas.</p>
 <p>See <a href="https://dev.pandas.io/pandas2/internal-architecture.html#removal-of-blockmanager-new-dataframe-internals">these design
 documents</a>
 for more.</p>
-<h1>Decoupling of indexing and internals</h1>
+<h2 id="decoupling-of-indexing-and-internals">Decoupling of indexing and internals</h2>
 <p>The code for getting and setting values in pandas' data structures
 needs refactoring. In particular, we must clearly separate code that
 converts keys (e.g., the argument to <code>DataFrame.loc</code>) to positions from
@@ -189,7 +190,7 @@ keys to positions should be entirely done at a higher level.</p>
 <p>Indexing is a complicated API with many subtleties. This refactor will
 require care and attention. More details are discussed at
 <a href="https://github.com/pandas-dev/pandas/wiki/(Tentative)-rules-for-restructuring-indexing-code">https://github.com/pandas-dev/pandas/wiki/(Tentative)-rules-for-restructuring-indexing-code</a></p>
-<h1>Numba-accelerated operations</h1>
+<h2 id="numba-accelerated-operations">Numba-accelerated operations</h2>
 <p><a href="https://numba.pydata.org">Numba</a> is a JIT compiler for Python code.
 We'd like to provide ways for users to apply their own Numba-jitted
 functions where pandas accepts user-defined functions (for example,
@@ -199,7 +200,7 @@ functions where pandas accepts user-defined functions (for example,
 window contexts). This will improve the performance of
 user-defined-functions in these operations by staying within compiled
 code.</p>
-<h1>Documentation improvements</h1>
+<h2 id="documentation-improvements">Documentation improvements</h2>
 <p>We'd like to improve the content, structure, and presentation of the
 pandas documentation. Some specific goals include</p>
 <ul>
@@ -213,7 +214,7 @@ pandas documentation. Some specific goals include</p>
     subsections of the documentation to make navigation and finding
     content easier.</li>
 </ul>
-<h1>Package docstring validation</h1>
+<h2 id="package-docstring-validation">Package docstring validation</h2>
 <p>To improve the quality and consistency of pandas docstrings, we've
 developed tooling to check docstrings in a variety of ways.
 <a href="https://github.com/pandas-dev/pandas/blob/master/scripts/validate_docstrings.py">https://github.com/pandas-dev/pandas/blob/master/scripts/validate_docstrings.py</a>
@@ -223,7 +224,7 @@ contains the checks.</p>
 docstrings. With the collaboration of the numpydoc maintainers, we'd
 like to move the checks to a package other than pandas so that other
 projects can easily use them as well.</p>
-<h1>Performance monitoring</h1>
+<h2 id="performance-monitoring">Performance monitoring</h2>
 <p>Pandas uses <a href="https://asv.readthedocs.io/en/stable/">airspeed velocity</a>
 to monitor for performance regressions. ASV itself is a fabulous tool,
 but requires some additional work to be integrated into an open source
@@ -241,7 +242,7 @@ and tools managing the benchmark runs and reporting on results.</p>
 <li>Build a GitHub bot to request ASV runs <em>before</em> a PR is merged.
     Currently, the benchmarks are only run nightly.</li>
 </ul>
-<h1>Roadmap Evolution</h1>
+<h2 id="roadmap-evolution">Roadmap Evolution</h2>
 <p>Pandas continues to evolve. The direction is primarily determined by
 community interest. Everyone is welcome to review existing items on the
 roadmap and to propose a new item.</p>

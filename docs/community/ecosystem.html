@@ -75,6 +75,8 @@
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
                                     
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
                                         <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
@@ -103,7 +105,7 @@
         </header>
         <main role="main">
             <div class="container">
-                <h1>Pandas ecosystem</h1>
+                <h1 id="pandas-ecosystem">Pandas ecosystem</h1>
 <p>Increasingly, packages are being built on top of pandas to address
 specific needs in data preparation, analysis and visualization. This is
 encouraging because it means pandas is not only helping users to handle
@@ -119,32 +121,32 @@ pandas</a>.</p>
 <p>We\'d like to make it easier for users to find these projects, if you
 know of other substantial projects that you feel should be on this list,
 please let us know.</p>
-<h2>Statistics and machine learning</h2>
-<h3><a href="https://www.statsmodels.org/">Statsmodels</a></h3>
+<h2 id="statistics-and-machine-learning">Statistics and machine learning</h2>
+<h3 id="statsmodels"><a href="https://www.statsmodels.org/">Statsmodels</a></h3>
 <p>Statsmodels is the prominent Python \"statistics and econometrics
 library\" and it has a long-standing special relationship with pandas.
 Statsmodels provides powerful statistics, econometrics, analysis and
 modeling functionality that is out of pandas\' scope. Statsmodels
 leverages pandas objects as the underlying data container for
 computation.</p>
-<h3><a href="https://github.com/paulgb/sklearn-pandas">sklearn-pandas</a></h3>
+<h3 id="sklearn-pandas"><a href="https://github.com/paulgb/sklearn-pandas">sklearn-pandas</a></h3>
 <p>Use pandas DataFrames in your <a href="https://scikit-learn.org/">scikit-learn</a>
 ML pipeline.</p>
-<h3><a href="https://github.com/featuretools/featuretools/">Featuretools</a></h3>
+<h3 id="featuretools"><a href="https://github.com/featuretools/featuretools/">Featuretools</a></h3>
 <p>Featuretools is a Python library for automated feature engineering built
 on top of pandas. It excels at transforming temporal and relational
 datasets into feature matrices for machine learning using reusable
 feature engineering \"primitives\". Users can contribute their own
 primitives in Python and share them with the rest of the community.</p>
-<h2>Visualization</h2>
-<h3><a href="https://altair-viz.github.io/">Altair</a></h3>
+<h2 id="visualization">Visualization</h2>
+<h3 id="altair"><a href="https://altair-viz.github.io/">Altair</a></h3>
 <p>Altair is a declarative statistical visualization library for Python.
 With Altair, you can spend more time understanding your data and its
 meaning. Altair\'s API is simple, friendly and consistent and built on
 top of the powerful Vega-Lite JSON specification. This elegant
 simplicity produces beautiful and effective visualizations with a
 minimal amount of code. Altair works with Pandas DataFrames.</p>
-<h3><a href="https://bokeh.pydata.org">Bokeh</a></h3>
+<h3 id="bokeh"><a href="https://bokeh.pydata.org">Bokeh</a></h3>
 <p>Bokeh is a Python interactive visualization library for large datasets
 that natively uses the latest web technologies. Its goal is to provide
 elegant, concise construction of novel graphics in the style of
@@ -158,7 +160,7 @@ backend via</p>
 
 <p>It is very similar to the matplotlib plotting backend, but provides
 interactive web-based charts and maps.</p>
-<h3><a href="https://seaborn.pydata.org">seaborn</a></h3>
+<h3 id="seaborn"><a href="https://seaborn.pydata.org">seaborn</a></h3>
 <p>Seaborn is a Python visualization library based on
 <a href="https://matplotlib.org">matplotlib</a>. It provides a high-level,
 dataset-oriented interface for creating attractive statistical graphics.
@@ -168,7 +170,7 @@ of complex visualizations. Seaborn also goes beyond matplotlib and
 pandas with the option to perform statistical estimation while plotting,
 aggregating across observations and visualizing the fit of statistical
 models to emphasize patterns in a dataset.</p>
-<h3><a href="https://github.com/yhat/ggpy">yhat/ggpy</a></h3>
+<h3 id="yhatggpy"><a href="https://github.com/yhat/ggpy">yhat/ggpy</a></h3>
 <p>Hadley Wickham\'s <a href="https://ggplot2.tidyverse.org/">ggplot2</a> is a
 foundational exploratory visualization package for the R language. Based
 on <a href="https://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/GOG.html">\"The Grammar of
@@ -180,11 +182,11 @@ but a faithful implementation for Python users has long been missing.
 Although still young (as of Jan-2014), the
 <a href="https://github.com/yhat/ggpy">yhat/ggpy</a> project has been progressing
 quickly in that direction.</p>
-<h3><a href="https://github.com/vega/ipyvega">IPython Vega</a></h3>
+<h3 id="ipython-vega"><a href="https://github.com/vega/ipyvega">IPython Vega</a></h3>
 <p><a href="https://github.com/vega/ipyvega">IPython Vega</a> leverages [Vega
 \&lt;https://github.com/trifacta/vega>]__ to create plots
 within Jupyter Notebook.</p>
-<h3><a href="https://plot.ly/python">Plotly</a></h3>
+<h3 id="plotly"><a href="https://plot.ly/python">Plotly</a></h3>
 <p><a href="https://plot.ly/">Plotly's</a> <a href="https://plot.ly/python/">Python API</a>
 enables interactive figures and web shareability. Maps, 2D, 3D, and
 live-streaming graphs are rendered with WebGL and
@@ -200,17 +202,17 @@ is free for unlimited sharing, and has
 <a href="https://plot.ly/python/offline/">offline</a>, or
 <a href="https://plot.ly/product/enterprise/">on-premise</a> accounts for private
 use.</p>
-<h3><a href="https://github.com/draperjames/qtpandas">QtPandas</a></h3>
+<h3 id="qtpandas"><a href="https://github.com/draperjames/qtpandas">QtPandas</a></h3>
 <p>Spun off from the main pandas library, the
 <a href="https://github.com/draperjames/qtpandas">qtpandas</a> library enables
 DataFrame visualization and manipulation in PyQt4 and PySide
 applications.</p>
-<h2>IDE</h2>
-<h3><a href="https://ipython.org/documentation.html">IPython</a></h3>
+<h2 id="ide">IDE</h2>
+<h3 id="ipython"><a href="https://ipython.org/documentation.html">IPython</a></h3>
 <p>IPython is an interactive command shell and distributed computing
 environment. IPython tab completion works with Pandas methods and also
 attributes like DataFrame columns.</p>
-<h3><a href="https://jupyter.org">Jupyter Notebook / Jupyter Lab</a></h3>
+<h3 id="jupyter-notebook-jupyter-lab"><a href="https://jupyter.org">Jupyter Notebook / Jupyter Lab</a></h3>
 <p>Jupyter Notebook is a web application for creating Jupyter notebooks. A
 Jupyter notebook is a JSON document containing an ordered list of
 input/output cells which can contain code, text, mathematics, plots and
@@ -225,10 +227,10 @@ or may not be compatible with non-HTML Jupyter output formats.)</p>
 <p>See <code>Options and Settings &lt;options&gt;</code> and
 <code>Available Options &lt;options.available&gt;</code>
 for pandas <code>display.</code> settings.</p>
-<h3><a href="https://github.com/quantopian/qgrid">quantopian/qgrid</a></h3>
+<h3 id="quantopianqgrid"><a href="https://github.com/quantopian/qgrid">quantopian/qgrid</a></h3>
 <p>qgrid is \"an interactive grid for sorting and filtering DataFrames in
 IPython Notebook\" built with SlickGrid.</p>
-<h3><a href="https://www.spyder-ide.org/">Spyder</a></h3>
+<h3 id="spyder"><a href="https://www.spyder-ide.org/">Spyder</a></h3>
 <p>Spyder is a cross-platform PyQt-based IDE combining the editing,
 analysis, debugging and profiling functionality of a software
 development tool with the data exploration, interactive execution, deep
@@ -250,8 +252,8 @@ Console</a>, and Spyder\'s
 <a href="https://docs.spyder-ide.org/help.html">Help pane</a> can retrieve and
 render Numpydoc documentation on pandas objects in rich text with Sphinx
 both automatically and on-demand.</p>
-<h2>API</h2>
-<h3><a href="https://github.com/pydata/pandas-datareader">pandas-datareader</a></h3>
+<h2 id="api">API</h2>
+<h3 id="pandas-datareader"><a href="https://github.com/pydata/pandas-datareader">pandas-datareader</a></h3>
 <p><code>pandas-datareader</code> is a remote data access library for pandas
 (PyPI:<code>pandas-datareader</code>). It is based on functionality that was
 located in <code>pandas.io.data</code> and <code>pandas.io.wb</code> but was split off in
@@ -278,15 +280,15 @@ docs</a>:</p>
 <li>MOEX Data</li>
 </ul>
 </blockquote>
-<h3><a href="https://github.com/quandl/Python">quandl/Python</a></h3>
+<h3 id="quandlpython"><a href="https://github.com/quandl/Python">quandl/Python</a></h3>
 <p>Quandl API for Python wraps the Quandl REST API to return Pandas
 DataFrames with timeseries indexes.</p>
-<h3><a href="https://github.com/vfilimonov/pydatastream">pydatastream</a></h3>
+<h3 id="pydatastream"><a href="https://github.com/vfilimonov/pydatastream">pydatastream</a></h3>
 <p>PyDatastream is a Python interface to the <a href="http://dataworks.thomson.com/Dataworks/Enterprise/1.0/">Thomson Dataworks Enterprise
 (DWE/Datastream)</a>
 SOAP API to return indexed Pandas DataFrames with financial data. This
 package requires valid credentials for this API (non free).</p>
-<h3><a href="https://pandasdmx.readthedocs.io">pandaSDMX</a></h3>
+<h3 id="pandasdmx"><a href="https://pandasdmx.readthedocs.io">pandaSDMX</a></h3>
 <p>pandaSDMX is a library to retrieve and acquire statistical data and
 metadata disseminated in <a href="https://www.sdmx.org">SDMX</a> 2.1, an
 ISO-standard widely used by institutions such as statistics offices,
@@ -294,7 +296,7 @@ central banks, and international organisations. pandaSDMX can expose
 datasets and related structural metadata including data flows,
 code-lists, and data structure definitions as pandas Series or
 MultiIndexed DataFrames.</p>
-<h3><a href="https://github.com/mortada/fredapi">fredapi</a></h3>
+<h3 id="fredapi"><a href="https://github.com/mortada/fredapi">fredapi</a></h3>
 <p>fredapi is a Python interface to the <a href="https://fred.stlouisfed.org/">Federal Reserve Economic Data
 (FRED)</a> provided by the Federal Reserve
 Bank of St. Louis. It works with both the FRED database and ALFRED
@@ -304,42 +306,42 @@ and also provides several convenient methods for parsing and analyzing
 point-in-time data from ALFRED. fredapi makes use of pandas and returns
 data in a Series or DataFrame. This module requires a FRED API key that
 you can obtain for free on the FRED website.</p>
-<h2>Domain specific</h2>
-<h3><a href="https://github.com/kjordahl/geopandas">Geopandas</a></h3>
+<h2 id="domain-specific">Domain specific</h2>
+<h3 id="geopandas"><a href="https://github.com/kjordahl/geopandas">Geopandas</a></h3>
 <p>Geopandas extends pandas data objects to include geographic information
 which support geometric operations. If your work entails maps and
 geographical coordinates, and you love pandas, you should take a close
 look at Geopandas.</p>
-<h3><a href="https://github.com/pydata/xarray">xarray</a></h3>
+<h3 id="xarray"><a href="https://github.com/pydata/xarray">xarray</a></h3>
 <p>xarray brings the labeled data power of pandas to the physical sciences
 by providing N-dimensional variants of the core pandas data structures.
 It aims to provide a pandas-like and pandas-compatible toolkit for
 analytics on multi-dimensional arrays, rather than the tabular data for
 which pandas excels.</p>
-<h2>Out-of-core</h2>
-<h3><a href="http://blaze.pydata.org/">Blaze</a></h3>
+<h2 id="out-of-core">Out-of-core</h2>
+<h3 id="blaze"><a href="http://blaze.pydata.org/">Blaze</a></h3>
 <p>Blaze provides a standard API for doing computations with various
 in-memory and on-disk backends: NumPy, Pandas, SQLAlchemy, MongoDB,
 PyTables, PySpark.</p>
-<h3><a href="https://dask.readthedocs.io/en/latest/">Dask</a></h3>
+<h3 id="dask"><a href="https://dask.readthedocs.io/en/latest/">Dask</a></h3>
 <p>Dask is a flexible parallel computing library for analytics. Dask
 provides a familiar <code>DataFrame</code> interface for out-of-core, parallel and
 distributed computing.</p>
-<h3><a href="https://dask-ml.readthedocs.io/en/latest/">Dask-ML</a></h3>
+<h3 id="dask-ml"><a href="https://dask-ml.readthedocs.io/en/latest/">Dask-ML</a></h3>
 <p>Dask-ML enables parallel and distributed machine learning using Dask
 alongside existing machine learning libraries like Scikit-Learn,
 XGBoost, and TensorFlow.</p>
-<h3><a href="https://koalas.readthedocs.io/en/latest/">Koalas</a></h3>
+<h3 id="koalas"><a href="https://koalas.readthedocs.io/en/latest/">Koalas</a></h3>
 <p>Koalas provides a familiar pandas DataFrame interface on top of Apache
 Spark. It enables users to leverage multi-cores on one machine or a
 cluster of machines to speed up or scale their DataFrame code.</p>
-<h3><a href="http://odo.pydata.org">Odo</a></h3>
+<h3 id="odo"><a href="http://odo.pydata.org">Odo</a></h3>
 <p>Odo provides a uniform API for moving data between different formats. It
 uses pandas own <code>read_csv</code> for CSV IO and leverages many existing
 packages such as PyTables, h5py, and pymongo to move data between non
 pandas formats. Its graph based approach is also extensible by end users
 for custom formats that may be too specific for the core of odo.</p>
-<h3><a href="https://ray.readthedocs.io/en/latest/pandas_on_ray.html">Ray</a></h3>
+<h3 id="ray"><a href="https://ray.readthedocs.io/en/latest/pandas_on_ray.html">Ray</a></h3>
 <p>Pandas on Ray is an early stage DataFrame library that wraps Pandas and
 transparently distributes the data and computation. The user does not
 need to know how many cores their system has, nor do they need to
@@ -353,7 +355,7 @@ Ray just like you would Pandas.</p>
 import ray.dataframe as pd
 </code></pre>
 
-<h3><a href="https://docs.vaex.io/">Vaex</a></h3>
+<h3 id="vaex"><a href="https://docs.vaex.io/">Vaex</a></h3>
 <p>Increasingly, packages are being built on top of pandas to address
 specific needs in data preparation, analysis and visualization. Vaex is
 a python library for Out-of-Core DataFrames (similar to Pandas), to
@@ -370,20 +372,20 @@ wasted).</p>
 <li>vaex.to_pandas_df</li>
 </ul>
 </blockquote>
-<h2>Data validation</h2>
-<h3><a href="https://engarde.readthedocs.io/en/latest/">Engarde</a></h3>
+<h2 id="data-validation">Data validation</h2>
+<h3 id="engarde"><a href="https://engarde.readthedocs.io/en/latest/">Engarde</a></h3>
 <p>Engarde is a lightweight library used to explicitly state your
 assumptions about your datasets and check that they\'re <em>actually</em> true.</p>
-<h2>Extension data types</h2>
+<h2 id="extension-data-types">Extension data types</h2>
 <p>Pandas provides an interface for defining
 <code>extension types &lt;extending.extension-types&gt;</code> to extend NumPy\'s type system. The following libraries
 implement that interface to provide types not found in NumPy or pandas,
 which work well with pandas\' data containers.</p>
-<h3><a href="https://cyberpandas.readthedocs.io/en/latest">cyberpandas</a></h3>
+<h3 id="cyberpandas"><a href="https://cyberpandas.readthedocs.io/en/latest">cyberpandas</a></h3>
 <p>Cyberpandas provides an extension type for storing arrays of IP
 Addresses. These arrays can be stored inside pandas\' Series and
 DataFrame.</p>
-<h2>Accessors</h2>
+<h2 id="accessors">Accessors</h2>
 <p>A directory of projects providing
 <code>extension accessors &lt;extending.register-accessors&gt;</code>. This is for users to discover new accessors and for library
 authors to coordinate on the namespace.</p>
