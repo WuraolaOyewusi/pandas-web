@@ -9,29 +9,27 @@ If you want to support pandas development, you can find information in the [dona
 ## Maintainers
 
 <div class="row maintainers">
-    {% for row in maintainers.people | batch(6) %}
+    {% for row in maintainers.people | batch(6, "") %}
         <div class="card-deck maintainers">
             {% for person in row %}
                 <div class="col-md-6">
-                    <div class="card">
-                        <img class="card-img-top" alt="" src="{{ person.avatar_url }}"/>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                {% if person.blog %}
-                                    <a href="{{ person.blog }}">
+                    {% if person %}
+                        <div class="card">
+                            <img class="card-img-top" alt="" src="{{ person.avatar_url }}"/>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    {% if person.blog %}
+                                        <a href="{{ person.blog }}">
+                                            {{ person.name or person.login }}
+                                        </a>
+                                    {% else %}
                                         {{ person.name or person.login }}
-                                    </a>
-                                {% else %}
-                                    {{ person.name or person.login }}
-                                {% endif %}
-                            </h5>
-                            <p class="card-text"><a href="{{ person.html_url }}">{{ person.login }}</a></p>
+                                    {% endif %}
+                                </h5>
+                                <p class="card-text"><a href="{{ person.html_url }}">{{ person.login }}</a></p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            {% endfor %}
-            {% for empty_cell in range(6 - (len(row) % 6)) %}
-                <div class="col-md-6">
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
@@ -76,10 +74,8 @@ to the extent provided by law. As with any donation, you should consult with you
 ## Institutional partners
 
 <ul>
-    {% for company in partners.active %}
-        {% if company.employs %}
-            <li><a href="{{ company.url }}">{{ company.name }}</a> ({{ company.employs }})</li>
-        {% endif %}
+    {% for company in partners.active if company.employs %}
+        <li><a href="{{ company.url }}">{{ company.name }}</a> ({{ company.employs }})</li>
     {% endfor %}
 </ul>
 

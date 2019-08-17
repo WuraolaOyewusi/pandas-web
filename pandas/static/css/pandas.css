@@ -9,7 +9,7 @@ a.navbar-brand img {
     max-height: 2em;
 }
 div.card {
-    margin-bottom: 1em;
+    margin-bottom: 1em !important;
 }
 .carousel-caption {
     color: black;
