@@ -12,7 +12,7 @@ If you want to support pandas development, you can find information in the [dona
     {% for row in maintainers.people | batch(6, "") %}
         <div class="card-deck maintainers">
             {% for person in row %}
-                <div class="col-md-6">
+                <div class="col-md-2">
                     {% if person %}
                         <div class="card">
                             <img class="card-img-top" alt="" src="{{ person.avatar_url }}"/>
