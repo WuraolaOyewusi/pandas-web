@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pandas</title>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        
+            <link rel="stylesheet"
+                  href="/pandas-web/static/css/pandas.css">
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas.svg"/></a>
+
+                <div class="collapse navbar-collapse" id="nav-content">   
+                    <ul class="navbar-nav">
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/install.html">Install</a>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       id="documentation"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Documentation</a>
+                                    <div class="dropdown-menu" aria-labelledby="documentation">
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">Tutorials</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">User guide</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">API reference</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">Release notes</a>
+                                    
+                                    </div>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       id="community"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Community</a>
+                                    <div class="dropdown-menu" aria-labelledby="community">
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/about.html">About pandas</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/roadmap.html">Project roadmap</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/ecosystem.html">Ecosystem</a>
+                                    
+                                        <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/pandas">Ask a question (StackOverflow)</a>
+                                    
+                                        <a class="dropdown-item" href="https://groups.google.com/forum/#!forum/pydata">Discuss (mailing list)</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/contributing/">Contributing to pandas</a>
+                                    
+                                    </div>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/blog.html">Blog</a>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/donate.html">Donate</a>
+                                </li>
+                            
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="container">
+                <h1 id="contributing-to-the-documentation">Contributing to the documentation</h1>
+<p>Contributing to the documentation benefits everyone who uses <em>pandas</em>.
+We encourage you to help us improve the documentation, and you don\'t
+have to be an expert on <em>pandas</em> to do so! In fact, there are sections
+of the docs that are worse off after being written by experts. If
+something in the docs doesn\'t make sense to you, updating the relevant
+section after you figure it out is a great way to ensure it will help
+the next person.</p>
+<h2 id="about-the-pandas-documentation">About the <em>pandas</em> documentation</h2>
+<p>The documentation is written in <strong>reStructuredText</strong>, which is almost
+like writing in plain English, and built using
+<a href="http://sphinx.pocoo.org/">Sphinx</a>. The Sphinx Documentation has an
+excellent <a href="http://sphinx.pocoo.org/rest.html">introduction to reST</a>. Review the
+Sphinx docs to perform more complex changes to the documentation as
+well.</p>
+<p>Some other important things to know about the docs:</p>
+<ul>
+<li>
+<p>The <em>pandas</em> documentation consists of two parts: the docstrings in
+    the code itself and the docs in this folder <code>doc/</code>.</p>
+<p>The docstrings provide a clear explanation of the usage of the
+individual functions, while the documentation in this folder
+consists of tutorial-like overviews per topic together with some
+other information (what\'s new, installation, etc).</p>
+</li>
+<li>
+<p>The docstrings follow a pandas convention, based on the <strong>Numpy Docstring Standard</strong>.
+    Follow the <a href="docstring_guidelines.html">pandas docstring guide</a>
+    for detailed instructions on how to write a correct docstring.</p>
+</li>
+<li>
+<p>The tutorials make heavy use of the <a href="http://matplotlib.org/sampledoc/ipython_directive.html">ipython directive</a>
+    sphinx extension. This directive lets you put code in the
+    documentation which will be run during the doc build. For example:</p>
+<pre><code>.. ipython:: python
+
+    x = 2
+    x**3
+</code></pre>
+<p>will be rendered as:</p>
+<pre><code>In [1]: x = 2
+
+In [2]: x**3
+Out[2]: 8
+</code></pre>
+<p>Almost all code examples in the docs are run (and the output saved)
+during the doc build. This approach means that code examples will
+always be up to date, but it does make the doc building a bit more
+complex.</p>
+</li>
+<li>
+<p>Our API documentation in <code>doc/source/api.rst</code> houses the
+    auto-generated documentation from the docstrings. For classes, there
+    are a few subtleties around controlling which methods and attributes
+    have pages auto-generated.</p>
+<p>We have two autosummary templates for classes.</p>
+<ol>
+<li><code>_templates/autosummary/class.rst</code>. Use this when you want to
+    automatically generate a page for every public method and
+    attribute on the class. The <code>Attributes</code> and <code>Methods</code> sections
+    will be automatically added to the class\' rendered
+    documentation by numpydoc. See <code>DataFrame</code> for an example.</li>
+<li><code>_templates/autosummary/class_without_autosummary</code>. Use this
+    when you want to pick a subset of methods / attributes to
+    auto-generate pages for. When using this template, you should
+    include an <code>Attributes</code> and <code>Methods</code> section in the class
+    docstring. See <code>CategoricalIndex</code> for an example.</li>
+</ol>
+<p>Every method should be included in a <code>toctree</code> in <code>api.rst</code>, else
+Sphinx will emit a warning.</p>
+</li>
+</ul>
+<p>The <code>.rst</code> files are used to automatically generate Markdown and HTML
+versions of the docs. For this reason, please do not edit
+<code>CONTRIBUTING.md</code> directly, but instead make any changes to
+<code>doc/source/development/contributing.rst</code>. Then, to generate
+<code>CONTRIBUTING.md</code>, use <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> with
+the following command:</p>
+<pre><code>pandoc doc/source/development/contributing.rst -t markdown_github &gt; CONTRIBUTING.md
+</code></pre>
+<p>The utility script <code>scripts/validate_docstrings.py</code> can be used to get a
+csv summary of the API documentation. And also validate common errors in
+the docstring of a specific class, function or method. The summary also
+compares the list of methods documented in <code>doc/source/api.rst</code> (which
+is used to generate the <a href="http://pandas.pydata.org/pandas-docs/stable/api.html">API Reference</a> page)
+and the actual public methods. This will identify methods documented in
+<code>doc/source/api.rst</code> that are not actually class methods, and existing
+methods that are not documented in <code>doc/source/api.rst</code>.</p>
+<h2 id="updating-a-pandas-docstring">Updating a <em>pandas</em> docstring</h2>
+<p>When improving a single function or method\'s docstring, it is not
+necessarily needed to build the full documentation (see next section).
+However, there is a script that checks a docstring (for example for the
+<code>DataFrame.mean</code> method):</p>
+<pre><code>python scripts/validate_docstrings.py pandas.DataFrame.mean
+</code></pre>
+<p>This script will indicate some formatting errors if present, and will
+also run and test the examples included in the docstring. Check the
+pandas docstring guide for a
+detailed guide on how to format the docstring.</p>
+<p>The examples in the docstring (\'doctests\') must be valid Python code,
+that in a deterministic way returns the presented output, and that can
+be copied and run by users. This can be checked with the script above,
+and is also tested on Travis. A failing doctest will be a blocker for
+merging a PR. Check the examples section in
+the docstring guide for some tips and tricks to get the doctests
+passing.</p>
+<p>When doing a PR with a docstring update, it is good to post the output
+of the validation script in a comment on github.</p>
+<h2 id="how-to-build-the-pandas-documentation">How to build the <em>pandas</em> documentation</h2>
+<h3 id="requirements">Requirements</h3>
+<p>First, you need to have a development environment to be able to build
+pandas (see the docs on creating a development environment above).</p>
+<h3 id="building-the-documentation">Building the documentation</h3>
+<p>So how do you build the docs? Navigate to your local <code>doc/</code> directory in
+the console and run:</p>
+<pre><code>python make.py html
+</code></pre>
+<p>Then you can find the HTML output in the folder <code>doc/build/html/</code>.</p>
+<p>The first time you build the docs, it will take quite a while because it
+has to run all the code examples and build all the generated docstring
+pages. In subsequent evocations, sphinx will try to only build the pages
+that have been modified.</p>
+<p>If you want to do a full clean build, do:</p>
+<pre><code>python make.py clean
+python make.py html
+</code></pre>
+<p>You can tell <code>make.py</code> to compile only a single section of the docs,
+greatly reducing the turn-around time for checking your changes.</p>
+<pre><code># omit autosummary and API section
+python make.py clean
+python make.py --no-api
+
+# compile the docs with only a single section, relative to the "source" folder.
+# For example, compiling only this guide (docs/source/development/contributing.rst)
+python make.py clean
+python make.py --single development/contributing.rst
+
+# compile the reference docs for a single function
+python make.py clean
+python make.py --single pandas.DataFrame.join
+</code></pre>
+<p>For comparison, a full documentation build may take 15 minutes, but a
+single section may take 15 seconds. Subsequent builds, which only
+process portions you have changed, will be faster.</p>
+<p>You can also specify to use multiple cores to speed up the documentation
+build:</p>
+<pre><code>python make.py html --num-jobs 4
+</code></pre>
+<p>Open the following file in a web browser to see the full documentation
+you just built:</p>
+<pre><code>doc/build/html/index.html
+</code></pre>
+<p>And you'll have the satisfaction of seeing your new and improved
+documentation!</p>
+<h3 id="building-master-branch-documentation">Building master branch documentation</h3>
+<p>When pull requests are merged into the <em>pandas</em> <code>master</code> branch, the
+main parts of the documentation are also built by Travis-CI. These docs
+are then hosted <a href="https://dev.pandas.io">here</a>, see
+also the Continuous Integration section.</p>
+            </div>
+        </main>
+        <footer class="container pt-4 pt-md-5 border-top">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>
+                © 2009 - 2019, pandas team
+            </p>
+        </footer>
+                
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+            $(function () {
+              $('[data-toggle="popover"]').popover()
+            })
+        </script>
+    </body>
+</html>
