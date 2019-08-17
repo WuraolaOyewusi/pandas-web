@@ -1,15 +1,15 @@
 # Donate to pandas
 
-WIP
+_pandas_ is and always will be **free**. To make de development sustainable, we need _pandas_ users, corporate
+or individual, to support the development by providing their time and money.
 
-Document content:
+You can find more information about current developers and supporters in the [team page](community/team.html).
+Financial contributions will mainly be used to advance in the [pandas roadmap](community/roadmap.html).
 
-- Summary of why pandas needs funding
-- Explain what the money will be spent on (with link to roadmap)
-- Logos of NumFOCUS and pandas corporate sponsors
-- Reviews of past donors (people can leave a comment when they donate)
-- May be list of last stable release donors? (not sure if there is an API for that)
-- Django got some stuff, may be we can copy other ideas too: <https://www.djangoproject.com/fundraising/>
+- If your **company or organization** is interested in helping make pandas better, please contact us at [info@numfocus.org](mailto:info@numfocus.org)
+- If you want to contribute to _pandas_ with your **time**, please visit the [contributing page](community/contributing.html)
+- If you want to support _pandas_ with a **donation**, please use the form below:
+
 
 <div id="salsalabs-donate-container">
 </div>

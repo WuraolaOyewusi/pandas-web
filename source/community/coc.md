@@ -41,11 +41,11 @@ reported by contacting the working group by e-mail (pandas-coc@googlegroups.com)
 Messages sent to this e-mail address will not be publicly visible but only to
 the working group members. The working group currently includes
 
-- Safia Abdalla
-- Tom Augspurger
-- Joris Van den Bossche
-- Camille Scott
-- Nathaniel Smith
+<ul>
+    {% for person in maintainers.coc %}
+    <li>{{ person }}</li>
+    {% endfor %}
+</ul>
 
 All complaints will be reviewed and investigated and will result in a response
 that is deemed necessary and appropriate to the circumstances. Maintainers are

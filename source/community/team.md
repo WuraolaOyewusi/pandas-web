@@ -4,7 +4,7 @@
 
 _pandas_ is made with love by more than [1,500 volunteer contributors](https://github.com/pandas-dev/pandas/graphs/contributors).
 
-If you want to support pandas development, you can find information at the [Donate page](../donate.html).
+If you want to support pandas development, you can find information in the [donations page](../donate.html).
 
 ## Maintainers
 
@@ -53,19 +53,19 @@ to the extent provided by law. As with any donation, you should consult with you
 
 ## Code of conduct committee
 
-- Safia Abdalla
-- Tom Augspurger
-- Joris Van den Bossche
-- Camille Scott
-- Nathaniel Smith
+<ul>
+    {% for person in maintainers.coc %}
+    <li>{{ person }}</li>
+    {% endfor %}
+</ul>
 
 ## NumFOCUS committee
 
-- Phillip Cloud
-- Stephan Hoyer
-- Wes McKinney
-- Jeff Reback
-- Joris Van den Bossche
+<ul>
+    {% for person in maintainers.numfocus %}
+    <li>{{ person }}</li>
+    {% endfor %}
+</ul>
 
 ## Institutional partners
 
@@ -85,6 +85,6 @@ In-kind sponsors
 - Skipper Seabold
 - Jeff Tratner
 
-## Emeritus corporate sponsors
+## Past corporate sponsors
 
 - [Paris-Saclay Center for Data Science](https://www.datascience-paris-saclay.fr/)

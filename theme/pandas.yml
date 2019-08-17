@@ -29,6 +29,8 @@ navbar:
       target: https://groups.google.com/forum/#!forum/pydata
     - name: "Team"
       target: /community/team.html
+    - name: "License"
+      target: /community/license.html
     - name: "Code of Conduct"
       target: /community/coc.html
     - name: "Citing pandas"
@@ -69,3 +71,15 @@ maintainers:
   - jseabold
   - jtratner
   - lodagro
+  coc:
+  - Safia Abdalla
+  - Tom Augspurger
+  - Joris Van den Bossche
+  - Camille Scott
+  - Nathaniel Smith
+  numfocus:
+  - Phillip Cloud
+  - Stephan Hoyer
+  - Wes McKinney
+  - Jeff Reback
+  - Joris Van den Bossche

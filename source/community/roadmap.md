@@ -13,14 +13,12 @@ Additionally, an item *not* being on the roadmap does not exclude it
 from inclusion in pandas. The roadmap is intended for larger,
 fundamental changes to the project that are likely to take months or
 years of developer time. Smaller-scoped items will continue to be
-tracked on our [issue
-tracker](https://github.com/pandas-dev/pandas/issues).
+tracked on our [issue tracker](https://github.com/pandas-dev/pandas/issues).
 
-See `roadmap.evolution` for proposing
+See [Roadmap evolution](#roadmap-evolution) for proposing
 changes to this document.
 
-Extensibility
-=============
+## Extensibility
 
 Pandas `extending.extension-types` allow
 for extending NumPy types with custom data types and array storage.
@@ -35,8 +33,7 @@ library, making their behavior more consistent with the handling of
 NumPy arrays. We'll do this by cleaning up pandas' internals and
 adding new methods to the extension array interface.
 
-String data type
-================
+## String data type
 
 Currently, pandas stores text data in an `object` -dtype NumPy array.
 The current implementation has two primary drawbacks: First, `object`
@@ -57,8 +54,7 @@ work, we may need to implement certain operations expected by pandas
 users (for example the algorithm used in, `Series.str.upper`). That work
 may be done outside of pandas.
 
-Apache Arrow interoperability
-=============================
+## Apache Arrow interoperability
 
 [Apache Arrow](https://arrow.apache.org) is a cross-language development
 platform for in-memory data. The Arrow logical types are closely aligned
@@ -69,8 +65,7 @@ data types within pandas. This will let us take advantage of its I/O
 capabilities and provide for better interoperability with other
 languages and libraries using Arrow.
 
-Block manager rewrite
-=====================
+## Block manager rewrite
 
 We'd like to replace pandas current internal data structures (a
 collection of 1 or 2-D arrays) with a simpler collection of 1-D arrays.
@@ -97,8 +92,7 @@ See [these design
 documents](https://dev.pandas.io/pandas2/internal-architecture.html#removal-of-blockmanager-new-dataframe-internals)
 for more.
 
-Decoupling of indexing and internals
-====================================
+## Decoupling of indexing and internals
 
 The code for getting and setting values in pandas' data structures
 needs refactoring. In particular, we must clearly separate code that
@@ -113,8 +107,7 @@ Indexing is a complicated API with many subtleties. This refactor will
 require care and attention. More details are discussed at
 <https://github.com/pandas-dev/pandas/wiki/(Tentative)-rules-for-restructuring-indexing-code>
 
-Numba-accelerated operations
-============================
+## Numba-accelerated operations
 
 [Numba](https://numba.pydata.org) is a JIT compiler for Python code.
 We'd like to provide ways for users to apply their own Numba-jitted
@@ -126,8 +119,7 @@ window contexts). This will improve the performance of
 user-defined-functions in these operations by staying within compiled
 code.
 
-Documentation improvements
-==========================
+## Documentation improvements
 
 We'd like to improve the content, structure, and presentation of the
 pandas documentation. Some specific goals include
@@ -142,8 +134,7 @@ pandas documentation. Some specific goals include
     subsections of the documentation to make navigation and finding
     content easier.
 
-Package docstring validation
-============================
+## Package docstring validation
 
 To improve the quality and consistency of pandas docstrings, we've
 developed tooling to check docstrings in a variety of ways.
@@ -156,8 +147,7 @@ docstrings. With the collaboration of the numpydoc maintainers, we'd
 like to move the checks to a package other than pandas so that other
 projects can easily use them as well.
 
-Performance monitoring
-======================
+## Performance monitoring
 
 Pandas uses [airspeed velocity](https://asv.readthedocs.io/en/stable/)
 to monitor for performance regressions. ASV itself is a fabulous tool,
@@ -178,8 +168,7 @@ We'd like to fund improvements and maintenance of these tools to
 -   Build a GitHub bot to request ASV runs *before* a PR is merged.
     Currently, the benchmarks are only run nightly.
 
-Roadmap Evolution 
-=================
+## Roadmap Evolution
 
 Pandas continues to evolve. The direction is primarily determined by
 community interest. Everyone is welcome to review existing items on the

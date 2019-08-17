@@ -59,6 +59,8 @@ class Preprocessors:
 
     @staticmethod
     def home_add_releases(context):
+        context['releases'] = []
+
         resp = requests.get(
             'https://api.github.com/repos/pandas-dev/pandas/releases')
         # FIXME GitHub quota limit reached, failing silently for now
@@ -66,7 +68,6 @@ class Preprocessors:
             return context
         resp.raise_for_status()
 
-        context['releases'] = []
         for release in resp.json():
             if release['prerelease']:
                 continue
@@ -133,7 +134,9 @@ def main(config_fname: str,
                 content = f.read()
             if extension == '.md':
                 body = markdown.markdown(content,
-                                         extensions=['fenced_code'])
+                                         extensions=['toc',
+                                                     'tables',
+                                                     'fenced_code'])
                 content = '{% extends "layout.html" %}'
                 content += '{% block body %}'
                 content += body

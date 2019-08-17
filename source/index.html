@@ -90,14 +90,16 @@
 				</ul>
             </div>
             <div class="col-md-3">
-                <h4>Latest version: {{ releases[0].name }}</h4>
-                <ul>
-                    <li><a href="https://pandas.pydata.org/pandas-docs/stable/whatsnew/v0.25.0.html">What's new in {{ releases[0].name }}</a></li>
-                    <li>Release date:<br/>{{ releases[0].published.strftime("%b %d, %Y") }}</li>
-                    <li><a href="https://pandas.pydata.org/pandas-docs/stable/">Documentation (web)</a></li>
-                    <li><a href="https://pandas.pydata.org/pandas-docs/stable/pandas.pdf">Documentation (pdf)</a></li>
-                    <li><a href="{{ releases[0].url }}">Download source code</a></li>
-                </ul>
+                {% if releases %}
+                    <h4>Latest version: {{ releases[0].name }}</h4>
+                    <ul>
+                        <li><a href="https://pandas.pydata.org/pandas-docs/stable/whatsnew/v0.25.0.html">What's new in {{ releases[0].name }}</a></li>
+                        <li>Release date:<br/>{{ releases[0].published.strftime("%b %d, %Y") }}</li>
+                        <li><a href="https://pandas.pydata.org/pandas-docs/stable/">Documentation (web)</a></li>
+                        <li><a href="https://pandas.pydata.org/pandas-docs/stable/pandas.pdf">Documentation (pdf)</a></li>
+                        <li><a href="{{ releases[0].url }}">Download source code</a></li>
+                    </ul>
+                {% endif %}
 				<h3>Get the book</h3>
 				<p>
 					<a href="http://www.kqzyfj.com/click-7040302-11260198?url=http%3A%2F%2Fshop.oreilly.com%2Fproduct%2F0636920050896.do&cjsku=0636920023784">
