@@ -1,5 +1,5 @@
 static:
-  logo: /static/img/pandas.svg
+  logo: /static/img/pandas_dark.svg
   css:
   - /static/css/pandas.css
 navbar:
