@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pandas</title>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        
+            <link rel="stylesheet"
+                  href="/pandas-web/static/css/pandas.css">
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas_dark.svg"/></a>
+
+                <div class="collapse navbar-collapse" id="nav-content">   
+                    <ul class="navbar-nav">
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/install.html">Install</a>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       id="documentation"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Documentation</a>
+                                    <div class="dropdown-menu" aria-labelledby="documentation">
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">Tutorials</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">User guide</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">API reference</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">Release notes</a>
+                                    
+                                    </div>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       id="community"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Community</a>
+                                    <div class="dropdown-menu" aria-labelledby="community">
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/about.html">About pandas</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/roadmap.html">Project roadmap</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/ecosystem.html">Ecosystem</a>
+                                    
+                                        <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/pandas">Ask a question (StackOverflow)</a>
+                                    
+                                        <a class="dropdown-item" href="https://groups.google.com/forum/#!forum/pydata">Discuss (mailing list)</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/contributing/">Contributing to pandas</a>
+                                    
+                                    </div>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/blog.html">Blog</a>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/donate.html">Donate</a>
+                                </li>
+                            
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="container">
+                <h1 id="working-with-git">Working with git</h1>
+<p>Now that you have an issue you want to fix, enhancement to add, or
+documentation to improve, you need to learn how to work with GitHub and
+the <em>pandas</em> code base.</p>
+<h2 id="version-control-git-and-github">Version control, Git, and GitHub</h2>
+<p>To the new user, working with Git is one of the more daunting aspects of
+contributing to <em>pandas</em>. It can very quickly become overwhelming, but
+sticking to the guidelines below will help keep the process
+straightforward and mostly trouble free. As always, if you are having
+difficulties please feel free to ask for help.</p>
+<p>The code is hosted on
+<a href="https://www.github.com/pandas-dev/pandas">GitHub</a>. To contribute you
+will need to sign up for a <a href="https://github.com/signup/free">free GitHub account</a>.
+We use <a href="http://git-scm.com/">Git</a> for version control to allow many people to
+work together on the project.</p>
+<p>Some great resources for learning Git:</p>
+<ul>
+<li>the <a href="http://help.github.com/">GitHub help pages</a>.</li>
+<li>the <a href="http://docs.scipy.org/doc/numpy/dev/index.html">NumPy documentation</a>.</li>
+<li>Matthew Brett's <a href="http://matthew-brett.github.com/pydagogue/">Pydagogue</a>.</li>
+</ul>
+<h2 id="getting-started-with-git">Getting started with Git</h2>
+<p><a href="http://help.github.com/set-up-git-redirect">GitHub has instructions</a>
+for installing git, setting up your SSH key, and configuring git. All
+these steps need to be completed before you can work seamlessly between
+your local repository and GitHub.</p>
+<h2 id="forking">Forking</h2>
+<p>You will need your own fork to work on the code. Go to the <a href="https://github.com/pandas-dev/pandas">pandas
+project page</a> and hit the
+<code>Fork</code> button. You will want to clone your fork to your machine:</p>
+<pre><code>git clone https://github.com/your-user-name/pandas.git pandas-yourname
+cd pandas-yourname
+git remote add upstream https://github.com/pandas-dev/pandas.git
+</code></pre>
+<p>This creates the directory <code>pandas-yourname</code> and connects
+your repository to the upstream (main project) <em>pandas</em> repository.</p>
+<h2 id="creating-a-branch">Creating a branch</h2>
+<p>You want your master branch to reflect only production-ready code, so
+create a feature branch for making your changes. For example:</p>
+<pre><code>git branch shiny-new-feature
+git checkout shiny-new-feature
+</code></pre>
+<p>The above can be simplified to:</p>
+<pre><code>git checkout -b shiny-new-feature
+</code></pre>
+<p>This changes your working directory to the shiny-new-feature branch.
+Keep any changes in this branch specific to one bug or feature so it is
+clear what the branch brings to <em>pandas</em>. You can have many
+shiny-new-features and switch in between them using the git checkout
+command.</p>
+<p>When creating this branch, make sure your master branch is up to date
+with the latest upstream master version. To update your local master
+branch, you can do:</p>
+<pre><code>git checkout master
+git pull upstream master --ff-only
+</code></pre>
+<p>When you want to update the feature branch with changes in master after
+you created the branch, check the section on
+updating a PR.</p>
+            </div>
+        </main>
+        <footer class="container pt-4 pt-md-5 border-top">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>
+                © 2009 - 2019, pandas team
+            </p>
+        </footer>
+                
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+            $(function () {
+              $('[data-toggle="popover"]').popover()
+            })
+        </script>
+    </body>
+</html>

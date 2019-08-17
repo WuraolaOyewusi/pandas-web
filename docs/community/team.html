@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pandas</title>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        
+            <link rel="stylesheet"
+                  href="/pandas-web/static/css/pandas.css">
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas_dark.svg"/></a>
+
+                <div class="collapse navbar-collapse" id="nav-content">   
+                    <ul class="navbar-nav">
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/install.html">Install</a>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       id="documentation"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Documentation</a>
+                                    <div class="dropdown-menu" aria-labelledby="documentation">
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">Tutorials</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">User guide</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">API reference</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">Release notes</a>
+                                    
+                                    </div>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       id="community"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Community</a>
+                                    <div class="dropdown-menu" aria-labelledby="community">
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/about.html">About pandas</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/roadmap.html">Project roadmap</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/ecosystem.html">Ecosystem</a>
+                                    
+                                        <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/pandas">Ask a question (StackOverflow)</a>
+                                    
+                                        <a class="dropdown-item" href="https://groups.google.com/forum/#!forum/pydata">Discuss (mailing list)</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/contributing/">Contributing to pandas</a>
+                                    
+                                    </div>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/blog.html">Blog</a>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/donate.html">Donate</a>
+                                </li>
+                            
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="container">
+                <h1 id="team">Team</h1>
+<h2 id="contributors">Contributors</h2>
+<p><em>pandas</em> is made with love by more than <a href="https://github.com/pandas-dev/pandas/graphs/contributors">1,500 volunteer contributors</a>.</p>
+<p>If you want to support pandas development, you can find information in the <a href="../donate.html">donations page</a>.</p>
+<h2 id="maintainers">Maintainers</h2>
+<div class="row maintainers">
+    
+        <div class="card-deck maintainers">
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars2.githubusercontent.com/u/329591?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="http://wesmckinney.com">
+                                    Wes McKinney
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/wesm">wesm</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars2.githubusercontent.com/u/1020496?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="https://jorisvandenbossche.github.io/">
+                                    Joris Van den Bossche
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/jorisvandenbossche">jorisvandenbossche</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars3.githubusercontent.com/u/1312546?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="https://tomaugspurger.github.io">
+                                    Tom Augspurger
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/TomAugspurger">TomAugspurger</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars2.githubusercontent.com/u/1217238?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="http://stephanhoyer.com">
+                                    Stephan Hoyer
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/shoyer">shoyer</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars2.githubusercontent.com/u/953992?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                Jeff Reback
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/jreback">jreback</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars1.githubusercontent.com/u/1924092?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                chris-b1
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/chris-b1">chris-b1</a></p>
+                    </div>
+                </div>
+            
+        </div>
+    
+        <div class="card-deck maintainers">
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars1.githubusercontent.com/u/1696302?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                Sinhrks
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/sinhrks">sinhrks</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars1.githubusercontent.com/u/417981?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                Phillip Cloud
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/cpcloud">cpcloud</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars0.githubusercontent.com/u/9273653?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="https://gitlab.com/gfyoung">
+                                    gfyoung
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/gfyoung">gfyoung</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars1.githubusercontent.com/u/1224492?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="http://pietrobattiston.it">
+                                    Pietro Battiston
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/toobaz">toobaz</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars0.githubusercontent.com/u/609873?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="http://innobi.io">
+                                    William Ayd
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/WillAyd">WillAyd</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars0.githubusercontent.com/u/10647082?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="https://mroeschke.github.io">
+                                    Matthew Roeschke
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/mroeschke">mroeschke</a></p>
+                    </div>
+                </div>
+            
+        </div>
+    
+        <div class="card-deck maintainers">
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars3.githubusercontent.com/u/5332445?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                Jeremy Schendel
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/jschendel">jschendel</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars1.githubusercontent.com/u/8078968?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                jbrockmendel
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/jbrockmendel">jbrockmendel</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars2.githubusercontent.com/u/10058240?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                <a href="http://datapythonista.github.io">
+                                    Marc Garcia
+                                </a>
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/datapythonista">datapythonista</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars0.githubusercontent.com/u/13159005?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                Simon Hawkins
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/simonjayhawkins">simonjayhawkins</a></p>
+                    </div>
+                </div>
+            
+                <div class="card col-md-6">
+                    <img class="card-img-top" alt="" src="https://avatars1.githubusercontent.com/u/26364415?v=4"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            
+                                Terji Petersen
+                            
+                        </h5>
+                        <p class="card-text"><a href="https://github.com/topper-123">topper-123</a></p>
+                    </div>
+                </div>
+            
+        </div>
+    
+</div>
+
+<h2 id="bdfl">BDFL</h2>
+<p>Wes McKinney is the Benevolent Dictator for Life (BDFL).</p>
+<h2 id="governance">Governance</h2>
+<p>The project governance is available in the <a href="governance.html">governance document</a>.</p>
+<h2 id="numfocus">NumFOCUS</h2>
+<p><img alt="" src="https://numfocus.org/wp-content/uploads/2018/01/optNumFocus_LRG.png" /></p>
+<p><em>pandas</em> is a Sponsored Project of <a href="https://numfocus.org/">NumFOCUS</a>, a 501(c)(3) nonprofit charity in the United States.
+NumFOCUS provides <em>pandas</em> with fiscal, legal, and administrative support to help ensure the
+health and sustainability of the project. Visit numfocus.org for more information.</p>
+<p>Donations to <em>pandas</em> are managed by NumFOCUS. For donors in the United States, your gift is tax-deductible
+to the extent provided by law. As with any donation, you should consult with your tax adviser about your particular tax situation.</p>
+<h2 id="code-of-conduct-committee">Code of conduct committee</h2>
+<ul>
+    
+        <li>Safia Abdalla</li>
+    
+        <li>Tom Augspurger</li>
+    
+        <li>Joris Van den Bossche</li>
+    
+        <li>Camille Scott</li>
+    
+        <li>Nathaniel Smith</li>
+    
+</ul>
+
+<h2 id="numfocus-committee">NumFOCUS committee</h2>
+<ul>
+    
+        <li>Phillip Cloud</li>
+    
+        <li>Stephan Hoyer</li>
+    
+        <li>Wes McKinney</li>
+    
+        <li>Jeff Reback</li>
+    
+        <li>Joris Van den Bossche</li>
+    
+</ul>
+
+<h2 id="institutional-partners">Institutional partners</h2>
+<ul>
+    
+        
+    
+        
+            <li><a href="https://www.anaconda.com/">Anaconda</a> (Tom Augspurger, Brock Mendel)</li>
+        
+    
+        
+            <li><a href="https://www.twosigma.com/">Two Sigma</a> (Phillip Cloud, Jeff Reback)</li>
+        
+    
+        
+            <li><a href="https://www.rstudio.com/">RStudio</a> (Wes McKinney)</li>
+        
+    
+        
+            <li><a href="https://ursalabs.org/">Ursa Labs</a> (Wes McKinney, Joris Van den Bossche)</li>
+        
+    
+</ul>
+
+<p>In-kind sponsors</p>
+<ul>
+<li><a href="https://opensource.indeedeng.io/">Indeed</a>: Logo and website design</li>
+<li>Can we find a donor for the hosting (website, benchmarks,...?)</li>
+</ul>
+<h2 id="emeritus-maintainers">Emeritus maintainers</h2>
+<ul>
+    
+        <li>Wouter Overmeire</li>
+    
+        <li>Skipper Seabold</li>
+    
+        <li>Jeff Tratner</li>
+    
+</ul>
+
+<h2 id="past-institutional-partners">Past institutional partners</h2>
+<ul>
+    
+        <li><a href="https://www.datascience-paris-saclay.fr/">Paris-Saclay Center for Data Science</a></li>
+    
+</ul>
+            </div>
+        </main>
+        <footer class="container pt-4 pt-md-5 border-top">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>
+                © 2009 - 2019, pandas team
+            </p>
+        </footer>
+                
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+            $(function () {
+              $('[data-toggle="popover"]').popover()
+            })
+        </script>
+    </body>
+</html>

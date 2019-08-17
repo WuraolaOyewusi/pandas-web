@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pandas</title>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        
+            <link rel="stylesheet"
+                  href="/pandas-web/static/css/pandas.css">
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas_dark.svg"/></a>
+
+                <div class="collapse navbar-collapse" id="nav-content">   
+                    <ul class="navbar-nav">
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/install.html">Install</a>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       id="documentation"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Documentation</a>
+                                    <div class="dropdown-menu" aria-labelledby="documentation">
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">Tutorials</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">User guide</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">API reference</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web#">Release notes</a>
+                                    
+                                    </div>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       id="community"
+                                       href="#"
+                                       role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false">Community</a>
+                                    <div class="dropdown-menu" aria-labelledby="community">
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/about.html">About pandas</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/roadmap.html">Project roadmap</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/ecosystem.html">Ecosystem</a>
+                                    
+                                        <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/pandas">Ask a question (StackOverflow)</a>
+                                    
+                                        <a class="dropdown-item" href="https://groups.google.com/forum/#!forum/pydata">Discuss (mailing list)</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
+                                    
+                                        <a class="dropdown-item" href="/pandas-web/community/contributing/">Contributing to pandas</a>
+                                    
+                                    </div>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/blog.html">Blog</a>
+                                </li>
+                            
+                        
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pandas-web/donate.html">Donate</a>
+                                </li>
+                            
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="container">
+                <h2 id="bug-reports-and-enhancement-requests">Bug reports and enhancement requests</h2>
+<p>Bug reports are an important part of making <em>pandas</em> more stable. Having
+a complete bug report will allow others to reproduce the bug and provide
+insight into fixing. See <a href="https://stackoverflow.com/help/mcve">this stackoverflow article</a>
+and <a href="http://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports">this blogpost</a>
+for tips on writing a good bug report.</p>
+<p>Trying the bug-producing code out on the <em>master</em> branch is often a
+worthwhile exercise to confirm the bug still exists. It is also worth
+searching existing bug reports and pull requests to see if the issue has
+already been reported and/or fixed.</p>
+<p>Bug reports must:</p>
+<ol>
+<li>Include a short, self-contained Python snippet reproducing the
+    problem. You can format the code nicely by using <a href="">GitHub Flavored
+    Markdown \&lt;http://github.github.com/github-flavored-markdown/></a>:</li>
+</ol>
+<pre><code class="python">&gt;&gt;&gt; from pandas import DataFrame
+&gt;&gt;&gt; df = DataFrame(...)
+...
+</code></pre>
+
+<ol>
+<li>Include the full version string of <em>pandas</em> and its dependencies.
+    You can use the built-in function:</li>
+</ol>
+<pre><code class="python">&gt;&gt;&gt; import pandas as pd
+&gt;&gt;&gt; pd.show_versions()
+</code></pre>
+
+<ol>
+<li>Explain why the current behavior is wrong/not desired and what you
+    expect instead.</li>
+</ol>
+<p>The issue will then show up to the <em>pandas</em> community and be open to
+comments/ideas from others.</p>
+            </div>
+        </main>
+        <footer class="container pt-4 pt-md-5 border-top">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>
+                © 2009 - 2019, pandas team
+            </p>
+        </footer>
+                
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+            $(function () {
+              $('[data-toggle="popover"]').popover()
+            })
+        </script>
+    </body>
+</html>
