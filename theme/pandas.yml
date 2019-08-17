@@ -68,9 +68,9 @@ maintainers:
   - simonjayhawkins
   - topper-123
   emeritus:
-  - jseabold
-  - jtratner
-  - lodagro
+  - Wouter Overmeire
+  - Skipper Seabold
+  - Jeff Tratner
   coc:
   - Safia Abdalla
   - Tom Augspurger
@@ -83,3 +83,27 @@ maintainers:
   - Wes McKinney
   - Jeff Reback
   - Joris Van den Bossche
+partners:
+  active:
+  - name: "NumFOCUS"
+    url: https://numfocus.org/
+    logo: /static/img/partners/numfocus.svg
+  - name: "Anaconda"
+    url: https://www.anaconda.com/
+    logo: /static/img/partners/anaconda.png
+    employs: "Tom Augspurger, Brock Mendel"
+  - name: "Two Sigma"
+    url: https://www.twosigma.com/
+    logo: /static/img/partners/two_sigma.svg
+    employs: "Phillip Cloud, Jeff Reback"
+  - name: "RStudio"
+    url: https://www.rstudio.com/
+    logo: /static/img/partners/r_studio.svg
+    employs: "Wes McKinney"
+  - name: "Ursa Labs"
+    url: https://ursalabs.org/
+    logo: /static/img/partners/ursa_labs.png
+    employs: "Wes McKinney, Joris Van den Bossche"
+  past:
+  - name: "Paris-Saclay Center for Data Science"
+    url: https://www.datascience-paris-saclay.fr/

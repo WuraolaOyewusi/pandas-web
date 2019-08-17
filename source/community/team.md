@@ -55,7 +55,7 @@ to the extent provided by law. As with any donation, you should consult with you
 
 <ul>
     {% for person in maintainers.coc %}
-    <li>{{ person }}</li>
+        <li>{{ person }}</li>
     {% endfor %}
 </ul>
 
@@ -63,16 +63,19 @@ to the extent provided by law. As with any donation, you should consult with you
 
 <ul>
     {% for person in maintainers.numfocus %}
-    <li>{{ person }}</li>
+        <li>{{ person }}</li>
     {% endfor %}
 </ul>
 
 ## Institutional partners
 
-- [Anaconda, Inc.](https://www.anaconda.com/) (Tom Augspurger, Brock Mendel)
-- [Two Sigma](https://www.twosigma.com/) (Phillip Cloud, Jeff Reback)
-- [RStudio](https://www.rstudio.com) (Wes McKinney)
-- [Ursa Labs](https://ursalabs.org) (Wes McKinney, Joris Van den Bossche)
+<ul>
+    {% for company in partners.active %}
+        {% if company.employs %}
+            <li><a href="{{ company.url }}">{{ company.name }}</a> ({{ company.employs }})</li>
+        {% endif %}
+    {% endfor %}
+</ul>
 
 In-kind sponsors
 
@@ -81,10 +84,16 @@ In-kind sponsors
 
 ## Emeritus maintainers
 
-- Wouter Overmeire
-- Skipper Seabold
-- Jeff Tratner
+<ul>
+    {% for person in maintainers.emeritus %}
+        <li>{{ person }}</li>
+    {% endfor %}
+</ul>
 
-## Past corporate sponsors
+## Past institutional partners
 
-- [Paris-Saclay Center for Data Science](https://www.datascience-paris-saclay.fr/)
+<ul>
+    {% for company in partners.past %}
+        <li><a href="{{ company.url }}">{{ company.name }}</a></li>
+    {% endfor %}
+</ul>

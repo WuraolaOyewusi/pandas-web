@@ -84,9 +84,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <a class="twitter-timeline" href="https://twitter.com/pandas_dev?ref_src=twsrc%5Etfw">Tweets by pandas_dev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-                </div>
+                <section>
+                    <h5>With the support of:</h5>
+                    <div class="row h-100">
+                        {% for company in partners.active %}
+                            <div class="col-md-2 my-auto">
+                                <a href="{{ company.url }}" target="_blank">
+                                    <img class="img-fluid" alt="{{ company.name }}" src="{{ company.logo }}"/>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
             </div>
             <div class="col-md-3">
                 {% if releases %}
@@ -99,14 +108,20 @@
                         <li><a href="{{ releases[0].url }}">Download source code</a></li>
                     </ul>
                 {% endif %}
-				<h3>Get the book</h3>
+                <h4>Follow us</h4>
+                <div class="text-center">
+                    <p>
+                        <a href="https://twitter.com/pandas_dev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @pandas_dev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </p>
+                </div>
+				<h4>Get the book</h4>
 				<p>
 					<a href="http://www.kqzyfj.com/click-7040302-11260198?url=http%3A%2F%2Fshop.oreilly.com%2Fproduct%2F0636920050896.do&cjsku=0636920023784">
 						<img class="img-fluid" alt="Python for Data Analysis" src="{{ base_url }}/static/img/pydata_book.jpeg"/>
 					</a>
 				</p>
                 {% if releases[1:5] %}
-                    <h5>Previous versions:</h5>
+                    <h4>Previous versions</h4>
                     <ul>
                         {% for release in releases[1:5] %}
                             <li>
