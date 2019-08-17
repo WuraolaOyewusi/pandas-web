@@ -12,20 +12,26 @@ If you want to support pandas development, you can find information in the [dona
     {% for row in maintainers.people | batch(6) %}
         <div class="card-deck maintainers">
             {% for person in row %}
-                <div class="card col-md-6">
-                    <img class="card-img-top" alt="" src="{{ person.avatar_url }}"/>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            {% if person.blog %}
-                                <a href="{{ person.blog }}">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img class="card-img-top" alt="" src="{{ person.avatar_url }}"/>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {% if person.blog %}
+                                    <a href="{{ person.blog }}">
+                                        {{ person.name or person.login }}
+                                    </a>
+                                {% else %}
                                     {{ person.name or person.login }}
-                                </a>
-                            {% else %}
-                                {{ person.name or person.login }}
-                            {% endif %}
-                        </h5>
-                        <p class="card-text"><a href="{{ person.html_url }}">{{ person.login }}</a></p>
+                                {% endif %}
+                            </h5>
+                            <p class="card-text"><a href="{{ person.html_url }}">{{ person.login }}</a></p>
+                        </div>
                     </div>
+                </div>
+            {% endfor %}
+            {% for empty_cell in range(6 - (len(row) % 6)) %}
+                <div class="col-md-6">
                 </div>
             {% endfor %}
         </div>
