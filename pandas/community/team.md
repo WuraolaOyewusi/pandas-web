@@ -8,11 +8,11 @@ If you want to support pandas development, you can find information in the [dona
 
 ## Maintainers
 
-<div class="maintainers">
+<div class="row maintainers">
     {% for row in maintainers.people | batch(6) %}
         <div class="card-deck maintainers">
             {% for person in row %}
-                <div class="card">
+                <div class="card col-md-6">
                     <img class="card-img-top" alt="" src="{{ person.avatar_url }}"/>
                     <div class="card-body">
                         <h5 class="card-title">
