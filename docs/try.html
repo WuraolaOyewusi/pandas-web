@@ -106,8 +106,23 @@
         <main role="main">
             <div class="container">
                 <h1 id="try-pandas-online">Try pandas online</h1>
-<p>Add here a web-based Python terminal like the one in <a href="https://spacy.io/">https://spacy.io/</a>,
-and links to some example notebooks in mybinder.</p>
+<pre data-executable>
+    import pandas
+    fibonacci = pandas.Series([1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
+    fibonacci.sum()
+</pre>
+
+<script src="juniper.min.js"></script>
+
+<script>new Juniper({ repo: 'datapythonista/pandas-web' })</script>
+
+<p>You can also try <em>pandas</em> on <a href="https://mybinder.org/">Binder</a> for one of the next topics:</p>
+<p><em>(links will be added soon)</em></p>
+<ul>
+<li>Exploratory analisys of US presidents</li>
+<li>Preprocessing the Titanic dataset to train a machine learning model</li>
+<li>Forecasting the stock market</li>
+</ul>
             </div>
         </main>
         <footer class="container pt-4 pt-md-5 border-top">
