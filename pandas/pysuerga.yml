@@ -1,8 +1,19 @@
 pysuerga:
   templates_path: _templates
+  base_template: "layout.html"
   ignore:
   - _templates/layout.html
   - pysuerga.yml
+  github_repo_url: pandas-dev/pandas
+  context_preprocessors:
+  - pysuerga.Preprocessors.navbar_add_info
+  - pysuerga.Preprocessors.blog_add_posts
+  - pysuerga.Preprocessors.maintainers_add_info
+  - pysuerga.Preprocessors.home_add_releases
+  markdown_extensions:
+  - toc
+  - tables
+  - fenced_code
 static:
   logo: /static/img/pandas_dark.svg
   css:
