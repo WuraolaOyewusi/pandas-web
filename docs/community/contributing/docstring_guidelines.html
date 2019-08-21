@@ -18,7 +18,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas.svg"/></a>
+                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas_dark.svg"/></a>
 
                 <div class="collapse navbar-collapse" id="nav-content">   
                     <ul class="navbar-nav">
@@ -75,6 +75,8 @@
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
                                     
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
                                         <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
@@ -103,8 +105,8 @@
         </header>
         <main role="main">
             <div class="container">
-                <h1>pandas docstring guide</h1>
-<h2>About docstrings and standards</h2>
+                <h1 id="pandas-docstring-guide">pandas docstring guide</h1>
+<h2 id="about-docstrings-and-standards">About docstrings and standards</h2>
 <p>A Python docstring is a string used to document a Python module, class,
 function or method, so programmers can understand what it does without
 having to read the details of the implementation.</p>
@@ -176,8 +178,8 @@ about reStructuredText can be found in:</p>
 see docstring sharing.</p>
 <p>The rest of this document will summarize all the above guides, and will
 provide additional convention specific to the pandas project.</p>
-<h2>Writing a docstring</h2>
-<h3>General rules</h3>
+<h2 id="writing-a-docstring">Writing a docstring</h2>
+<h3 id="general-rules">General rules</h3>
 <p>Docstrings must be defined with three double-quotes. No blank lines
 should be left before or after the docstring. The text starts in the
 next line after the opening quotes. The closing quotes have their own
@@ -234,7 +236,7 @@ for details.</p>
     return foo + bar
 </code></pre>
 
-<h3>Section 1: Short summary</h3>
+<h3 id="section-1-short-summary">Section 1: Short summary</h3>
 <p>The short summary is a single sentence that expresses what the function
 does in a concise way.</p>
 <p>The short summary must start with a capital letter, end with a dot, and
@@ -289,7 +291,7 @@ start with an infinitive verb.</p>
     pass
 </code></pre>
 
-<h3>Section 2: Extended summary</h3>
+<h3 id="section-2-extended-summary">Section 2: Extended summary</h3>
 <p>The extended summary provides details on what the function does. It
 should not go into the details of the parameters, or discuss
 implementation notes, which go in other sections.</p>
@@ -312,7 +314,7 @@ useful and their use cases, if it is not too generic.</p>
     pass
 </code></pre>
 
-<h3>Section 3: Parameters</h3>
+<h3 id="section-3-parameters">Section 3: Parameters</h3>
 <p>The details of the parameters will be added in this section. This
 section has the title \"Parameters\", followed by a line with a hyphen
 under each letter of the word \"Parameters\". A blank line is left
@@ -393,7 +395,7 @@ we will specify \"str, int or None, default None\".</p>
         pass
 </code></pre>
 
-<h4>Parameter types</h4>
+<h4 id="parameter-types">Parameter types</h4>
 <p>When specifying the parameter types, Python built-in data types can be
 used directly (the Python type is preferred to the more verbose string,
 integer, boolean, etc):</p>
@@ -464,7 +466,7 @@ in the list.</p>
 <ul>
 <li>axis : {0 or \'index\', 1 or \'columns\', None}, default None</li>
 </ul>
-<h3>Section 4: Returns or Yields</h3>
+<h3 id="section-4-returns-or-yields">Section 4: Returns or Yields</h3>
 <p>If the method returns a value, it will be documented in this section.
 Also if the method yields its output.</p>
 <p>The title of the section will be defined in the same way as the
@@ -531,7 +533,7 @@ def random_letters():
         yield np.random.random()
 </code></pre>
 
-<h3>Section 5: See Also</h3>
+<h3 id="section-5-see-also">Section 5: See Also</h3>
 <p>This section is used to let users know about pandas functionality
 related to the one being documented. In rare cases, if no related
 methods or functions can be found at all, this section can be skipped.</p>
@@ -603,7 +605,7 @@ indented in them.</p>
         return self.iloc[:5]
 </code></pre>
 
-<h3>Section 6: Notes</h3>
+<h3 id="section-6-notes">Section 6: Notes</h3>
 <p>This is an optional section used for notes about the implementation of
 the algorithm. Or to document technical aspects of the function
 behavior.</p>
@@ -611,7 +613,7 @@ behavior.</p>
 the algorithm, or you discover some counter-intuitive behavior while
 writing the examples for the function.</p>
 <p>This section follows the same format as the extended summary section.</p>
-<h3>Section 7: Examples</h3>
+<h3 id="section-7-examples">Section 7: Examples</h3>
 <p>This is one of the most important sections of a docstring, even if it is
 placed in the last position. As often, people understand concepts better
 with examples, than with accurate explanations.</p>
@@ -684,7 +686,7 @@ blank lines before and after them.</p>
 complexity of the function requires long examples, is recommended to use
 blocks with headers in bold. Use double star <code>**</code> to make a text bold,
 like in <code>**this example**</code>.</p>
-<h4>Conventions for the examples</h4>
+<h4 id="conventions-for-the-examples">Conventions for the examples</h4>
 <p>Code in examples is assumed to always start with these two lines which
 are not shown:</p>
 <pre><code class="python">import numpy as np
@@ -836,7 +838,7 @@ positional arguments <code>head(3)</code>.</p>
     pass
 </code></pre>
 
-<h4>Tips for getting your examples pass the doctests</h4>
+<h4 id="tips-for-getting-your-examples-pass-the-doctests">Tips for getting your examples pass the doctests</h4>
 <p>Getting the examples pass the doctests in the validation script can
 sometimes be tricky. Here are some attention points:</p>
 <ul>
@@ -885,7 +887,7 @@ object, this will fail the doctest :</p>
 </code></pre>
 </li>
 </ul>
-<h4>Plots in examples</h4>
+<h4 id="plots-in-examples">Plots in examples</h4>
 <p>There are some methods in pandas returning plots. To render the plots
 generated by the examples in the documentation, the <code>.. plot::</code>
 directive exists.</p>
@@ -909,7 +911,7 @@ documentation.</p>
         pass
 </code></pre>
 
-<h2>Sharing docstrings</h2>
+<h2 id="sharing-docstrings">Sharing docstrings</h2>
 <p>pandas has a system for sharing docstrings, with slight variations,
 between classes. This helps us keep docstrings consistent, while keeping
 things clear for the user reading. It comes at the cost of some
@@ -975,7 +977,7 @@ slightly closer to normal.</p>
 <code>pandas.core.generic.frame.fillna</code> for the filled versions.</p>
             </div>
         </main>
-        <footer class="container">
+        <footer class="container pt-4 pt-md-5 border-top">
             <p class="float-right">
                 <a href="#">Back to top</a>
             </p>

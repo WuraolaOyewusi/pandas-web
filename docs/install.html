@@ -18,7 +18,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas.svg"/></a>
+                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas_dark.svg"/></a>
 
                 <div class="collapse navbar-collapse" id="nav-content">   
                     <ul class="navbar-nav">
@@ -75,6 +75,8 @@
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
                                     
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
                                         <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
@@ -103,20 +105,42 @@
         </header>
         <main role="main">
             <div class="container">
-                <h1>Installation instructions</h1>
-<p>WIP, see: <a href="https://github.com/python-sprints/pandas-mentoring/issues/114">https://github.com/python-sprints/pandas-mentoring/issues/114</a></p>
-<p>Document topics:</p>
-<ul>
-<li>Download Anaconda / Miniconda</li>
-<li>Create conda environment (with pandas and JupyterLab)</li>
-<li>Activate environment</li>
-<li>Start JupyterLab</li>
-<li>Import pandas (don't use the pd alias)</li>
-<li>Show hello world example (e.g. <code>Series([1, 2, 3]).sum()</code>)</li>
-</ul>
+                <h1 id="installation-instructions">Installation instructions</h1>
+<p>The next steps provides the easiest and recommended way to set up your
+environment to use pandas. Other installation options can be found in
+the <a href="https://pandas.pydata.org/pandas-docs/stable/install.html">advanced installation page</a>.</p>
+<p>If you want to try pandas before installing it locally, you can do it online <a href="try.html">here</a>.</p>
+<ol>
+<li>
+<p>Download <a href="https://www.anaconda.com/distribution/">Anaconda</a> for your operating system and
+   the latest Python version, run the installer, and follow the steps. Detailed instructions
+   on how to install Anaconda can be found in the
+   <a href="https://docs.anaconda.com/anaconda/install/">Anaconda documentation</a>).</p>
+</li>
+<li>
+<p>In the Anaconda prompt (or terminal in Linux or MacOS), start JupyterLab:</p>
+<p><img class="img-fluid" alt="" src="/pandas-web/static/img/install/anaconda_prompt.png"/></p>
+</li>
+<li>
+<p>In JupyterLab, create a new (Python 3) notebook:</p>
+<p><img class="img-fluid" alt="" src="/pandas-web/static/img/install/jupyterlab_home.png"/></p>
+</li>
+<li>
+<p>In the first cell of the notebook, you can import pandas and check the version with:</p>
+<p><img class="img-fluid" alt="" src="/pandas-web/static/img/install/pandas_import_and_version.png"/></p>
+</li>
+<li>
+<p>Now you are ready to use pandas you can write your code in the next cells:</p>
+<p><img class="img-fluid" alt="" src="/pandas-web/static/img/install/pandas_fibonacci.png"/></p>
+</li>
+<li>
+<p>You can learn more about pandas in the <a href="#">tutorials</a>, and more about JupyterLab
+   in the <a href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html">JupyterLab documentation</a>.</p>
+</li>
+</ol>
             </div>
         </main>
-        <footer class="container">
+        <footer class="container pt-4 pt-md-5 border-top">
             <p class="float-right">
                 <a href="#">Back to top</a>
             </p>

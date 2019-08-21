@@ -18,7 +18,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas.svg"/></a>
+                <a class="navbar-brand" href="/pandas-web/"><img alt="" src="/pandas-web/static/img/pandas_dark.svg"/></a>
 
                 <div class="collapse navbar-collapse" id="nav-content">   
                     <ul class="navbar-nav">
@@ -75,6 +75,8 @@
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/team.html">Team</a>
                                     
+                                        <a class="dropdown-item" href="/pandas-web/community/license.html">License</a>
+                                    
                                         <a class="dropdown-item" href="/pandas-web/community/coc.html">Code of Conduct</a>
                                     
                                         <a class="dropdown-item" href="/pandas-web/community/citing.html">Citing pandas</a>
@@ -103,7 +105,7 @@
         </header>
         <main role="main">
             <div class="container">
-                <h1>Set up an pandas development environment</h1>
+                <h1 id="set-up-an-pandas-development-environment">Set up an pandas development environment</h1>
 <p>Before starting setting up a pandas development environment, you should have
 the next software installed:</p>
 <ul>
@@ -115,11 +117,11 @@ the next software installed:</p>
 <p>The steps below will download around 900Mb for the pandas
 repository, and around 600Mb for Anaconda from the Internet.</p>
 <hr />
-<h2>Instructions</h2>
-<h3>Create a GitHub account</h3>
+<h2 id="instructions">Instructions</h2>
+<h3 id="create-a-github-account">Create a GitHub account</h3>
 <p>If you don't have a GitHub account yet, simply go to https://github.com/join,
 and provide your personal information (name, email...). Select the free plan.</p>
-<h3>Get the pandas source code</h3>
+<h3 id="get-the-pandas-source-code">Get the pandas source code</h3>
 <p>All the changes during the sprints need to be made to the latest
 development version of pandas in a Git repository. Do not make them to a
 version downloaded from the Internet via pip, conda or a zip.</p>
@@ -158,7 +160,7 @@ in <a href="https://help.github.com/articles/syncing-a-fork/">Syncing a Fork</a>
 git checkout master
 git merge upstream/master
 </code></pre>
-<h3>Set up a Python environment</h3>
+<h3 id="set-up-a-python-environment">Set up a Python environment</h3>
 <p>Download and install <a href="https://www.anaconda.com/download/">Anaconda</a>.</p>
 <hr />
 <p><strong>Windows users</strong>
@@ -179,7 +181,7 @@ folder of the Start menu).</p>
 <p>Activate the new conda environment:</p>
 <pre><code>source activate pandas_dev
 </code></pre>
-<h3>Compile C code in pandas</h3>
+<h3 id="compile-c-code-in-pandas">Compile C code in pandas</h3>
 <p>Besides the Python <code>.py</code> files, pandas source code includes C/Cython files
 which need to be compiled in order to run the development version of pandas.</p>
 <hr />
@@ -196,7 +198,7 @@ development tools" on the right side.</p>
 python setup.py build_ext --inplace
 </code></pre>
 <p>The process will take several minutes.</p>
-<h3>Create a branch and start coding</h3>
+<h3 id="create-a-branch-and-start-coding">Create a branch and start coding</h3>
 <p>On the day of the sprint, you will get assigned one pandas function or
 method to work on. Once you know which, you need to create a git branch
 for your changes. This will be useful when you have finished your
@@ -227,7 +229,7 @@ a branch for each.</p>
 </code></pre>
             </div>
         </main>
-        <footer class="container">
+        <footer class="container pt-4 pt-md-5 border-top">
             <p class="float-right">
                 <a href="#">Back to top</a>
             </p>
